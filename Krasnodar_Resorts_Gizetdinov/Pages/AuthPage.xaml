@@ -5,10 +5,32 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AuthPage">
-
+      Title="AuthPage" Height="926" Width="428" Background="White" >
     <Grid>
-        
+        <TextBox x:Name="Login" BorderBrush="#201F4E" BorderThickness="2"  HorizontalAlignment="Left" Height="31" Margin="89,349,0,0" 
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240"/>
+        <TextBox x:Name="Password" BorderBrush="#201F4E" BorderThickness="2" HorizontalAlignment="Left" Height="31" Margin="89,398,0,0" 
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" />
+        <Button x:Name="Sign_Up" Content="Авторизоваться" Margin="104,458,112,428" Click="Sign_Up_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="Button">
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E"/>
+                        <Label Content="{TemplateBinding Content}" Foreground="White" HorizontalAlignment="Center"
+                               VerticalAlignment="Center"></Label>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="89,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Email" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="89,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Пароль" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="243" Margin="89,80,0,0" VerticalAlignment="Top" Width="266" Source="Res/Icons/PersIcon.png"/>
+        <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="46"  Margin="0,1,0,0" VerticalAlignment="Top" Width="428"/>
+        <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="68"  Margin="0,858,0,0" VerticalAlignment="Top" Width="428"/>
+        <Image HorizontalAlignment="Left" Height="121" Margin="126,858,0,-53"  VerticalAlignment="Top" Width="181" Source="Res/Icons/IconKurort.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="IconKurort.png" Stretch="None"/>
+            </Image.OpacityMask>
+        </Image>
     </Grid>
 </Page>

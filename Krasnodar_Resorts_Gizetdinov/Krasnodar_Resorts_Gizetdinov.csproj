@@ -149,8 +149,16 @@
   <ItemGroup>
     <Folder Include="Classes\" />
     <Folder Include="Pages\Res\Background\" />
-    <Folder Include="Pages\Res\Icons\" />
     <Folder Include="Pages\Res\Subjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Res\Icons\PersIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Res\Icons\IconKurort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\IconKurort.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
