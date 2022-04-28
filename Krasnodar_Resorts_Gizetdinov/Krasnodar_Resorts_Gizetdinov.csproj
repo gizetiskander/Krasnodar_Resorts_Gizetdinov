@@ -160,5 +160,8 @@
   <ItemGroup>
     <Resource Include="Pages\IconKurort.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Res\Icons\LogoKurort.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
