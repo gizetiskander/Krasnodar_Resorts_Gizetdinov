@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Krasnodar_Resorts_Gizetdinov.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AuthPage.xaml
+    /// Логика взаимодействия для AuthWindow.xaml
     /// </summary>
-    public partial class AuthPage : Page
+    public partial class AuthWindow : Window
     {
-        public AuthPage()
+        public AuthWindow()
         {
             InitializeComponent();
         }
@@ -29,6 +28,5 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
 
         }
-
     }
 }

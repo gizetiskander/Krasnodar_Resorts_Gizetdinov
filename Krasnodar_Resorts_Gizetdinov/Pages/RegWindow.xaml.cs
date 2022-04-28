@@ -10,19 +10,33 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Krasnodar_Resorts_Gizetdinov.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для RegPage.xaml
+    /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
-    public partial class RegPage : Page
+    public partial class RegWindow : Window
     {
-        public RegPage()
+        public RegWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_Image_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnImageDel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sign_In_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
