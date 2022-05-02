@@ -186,7 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
-    <Folder Include="Pages\Res\Background\" />
     <Folder Include="Pages\Res\Subjects\" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Res\Icons\LogoKurort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Res\Background\KurortBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

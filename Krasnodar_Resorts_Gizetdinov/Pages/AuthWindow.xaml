@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov.Pages"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="926" Width="428" Background="White" WindowStyle="ToolWindow"  ResizeMode="NoResize">
+        Title="AuthWindow" Height="926" Width="428" Background="White" WindowStyle="ToolWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="Login" BorderBrush="#201F4E" BorderThickness="2"  HorizontalAlignment="Left" Height="41" Margin="89,405,0,0" 
-                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240"/>
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Width="240"/>
         <TextBox x:Name="Password" BorderBrush="#201F4E" BorderThickness="2" HorizontalAlignment="Left" Height="42" Margin="89,505,0,0" 
-                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" />
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20"  Width="240" />
         <Button x:Name="Sign_Up" Content="Авторизоваться" Margin="104,586,112,260" Click="Sign_Up_Click">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">

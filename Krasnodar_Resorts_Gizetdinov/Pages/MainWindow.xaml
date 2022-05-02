@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov"
         xmlns:vm="clr-namespace:Krasnodar_Resorts_Gizetdinov.ViewPages"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"  WindowStyle="None"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:MainViewPages/>
     </Window.DataContext>
@@ -87,9 +87,10 @@
             <Border BorderThickness="0" Background="#201F4E" Opacity="0.6" Margin="0,-80,-15,0"/>
             <StackPanel Orientation="Vertical" Margin="0,0,-15,0">
                 <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenMPage}" Content="Главная"/>
+                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenOPage}" Content="Заказы"/>
+                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenSPage}" Content="Акции"/>
+                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenIPage}" Content="Информация"/>
                 <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenPPage}" Content="Личный кабинет"/>
-                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenIPage}" Content="Разбойник"/>
-                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenOPage}" Content="Маг"/>
             </StackPanel>
         </Grid>
         <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="100" Source="Res/Icons/LogoKurort.png" Margin="72,0,0,0"/>
