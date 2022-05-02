@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov.Pages"
         mc:Ignorable="d"
-        Title="RegWindow"  Height="1024" Width="480" Background="White">
+        Title="RegWindow"  Height="1024" Width="480" Background="White"  WindowStyle="ToolWindow"  ResizeMode="NoResize">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="Sign-up">
             <Border CornerRadius="25" BorderBrush="Black" BorderThickness="2"
@@ -22,10 +22,22 @@
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="350" Margin="96,89,0,0" VerticalAlignment="Top" Width="285" Grid.Column="1" Source="Res/Icons/LogoKurort.png" />
         <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="46" Margin="115,393,0,0" TextWrapping="Wrap" Text="" 
-                 VerticalAlignment="Top" Width="240" BorderBrush="#201F4E" BorderThickness="5" Grid.Column="1"/>
+                 VerticalAlignment="Top" Width="240" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Grid.Column="1"/>
         <TextBox x:Name="Login" HorizontalAlignment="Left" Height="46" Margin="115,476,0,0" TextWrapping="Wrap" Text="" 
-                 VerticalAlignment="Top" Width="240" Grid.Column="1" BorderBrush="#201F4E" BorderThickness="5"/>
-        <Button x:Name="Sign_In" Content="Регистрация" Margin="59,827,45,46" Click="Sign_In_Click" Grid.ColumnSpan="2" Width="268" 
+                 VerticalAlignment="Top" Width="240" FontSize="30" Grid.Column="1" BorderBrush="#201F4E" BorderThickness="5"/>
+        <Button x:Name="Sign_In" Content="Регистрация" Margin="113,825,93,110" Click="Sign_In_Click" Grid.ColumnSpan="2" Width="268" 
+                Height="61" BorderBrush="Black" BorderThickness="5">
+            <Button.Template>
+                <ControlTemplate  TargetType="Button">
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                        <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
+                               VerticalAlignment="Center" FontSize="24"></Label>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Sign_Up" Content="Авторизация" Margin="113,901,93,34" Click="Sign_Up_Click"  Grid.ColumnSpan="2" Width="268" 
                 Height="61" BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
@@ -38,18 +50,18 @@
             </Button.Template>
         </Button>
         <TextBox x:Name="Password" HorizontalAlignment="Left" Height="46" Margin="115,554,0,0" TextWrapping="Wrap" Text="" 
-                 VerticalAlignment="Top" Width="240" Grid.Column="1" BorderBrush="#201F4E" BorderThickness="5"/>
+                 VerticalAlignment="Top" Width="240" Grid.Column="1" FontSize="30" BorderBrush="#201F4E" BorderThickness="5"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
                    Foreground="Black" Text="ФИО" Height="26" Width="84" RenderTransformOrigin="0.963,9.875" Grid.Column="1" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,454,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
                    Foreground="Black" Text="Телефон" Height="33" Width="95" RenderTransformOrigin="0.618,0.875" Grid.Column="1" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular"
                    Foreground="Black" Text="Email" Height="29" Width="60" Grid.Column="1" FontSize="24"/>
-        <TextBox x:Name="About" HorizontalAlignment="Left" Height="46" BorderBrush="#201F4E" BorderThickness="5" Margin="118,638,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="About" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Margin="118,638,0,0" TextWrapping="Wrap" Text="" 
                  VerticalAlignment="Top" Width="240" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="118,612,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
                    Foreground="Black" Text="Пароль " Height="26" Width="92" Grid.Column="1" FontSize="24"/>
-        <Button x:Name="btn_Image" Content="Добавить фото" Margin="118,701,200,243" Click="btn_Image_Click" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="5">
+        <Button x:Name="btn_Image" Content="Добавить фото" Margin="118,701,200,249" Click="btn_Image_Click" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
                     <Grid>
@@ -63,8 +75,8 @@
         <Image x:Name="playim" HorizontalAlignment="Left" Height="100" Margin="300,701,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" 
                RenderTransformOrigin="0.84,0.515" />
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="46"  VerticalAlignment="Top" Width="480" Grid.ColumnSpan="2"/>
-        <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="46"  VerticalAlignment="Top" Width="472" Margin="0,947,0,0" Grid.ColumnSpan="2"/>
-        <Button x:Name="btn_ImageDel" Content="Удалить фото" Margin="118,769,200,166" Click="btnImageDel_Click" Grid.ColumnSpan="2" 
+        <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="29"  VerticalAlignment="Top" Width="474" Margin="0,967,0,0" Grid.ColumnSpan="2"/>
+        <Button x:Name="btn_ImageDel" Content="Удалить фото" Margin="118,769,200,171" Click="btnImageDel_Click" Grid.ColumnSpan="2" 
                 BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">

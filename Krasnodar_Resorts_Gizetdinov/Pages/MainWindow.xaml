@@ -81,16 +81,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Frame Grid.ColumnSpan="10" Grid.RowSpan="10" NavigationUIVisibility="Hidden" Content="{Binding CurPage}"/>
-        <Grid Name="TopMenu" Grid.Row="0" Grid.ColumnSpan="2">
-            <Border BorderThickness="1" BorderBrush="#FF303031" Background="Transparent" MouseDown="Border_MouseDown">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Res/Icons/LogoKurort.png"/>
-                </StackPanel>
-            </Border>
-        </Grid>
-        <Grid Name="SlideMenu" Grid.Column="0" Grid.Row="1" Background="#201F4E">
+
+        <Grid Name="SlideMenu" Grid.Column="0" Grid.Row="1" Background="Transparent">
             <Border BorderThickness="1, 0, 0, 1" BorderBrush="Transparent" Margin="0,0,-15,0"/>
-            <Border BorderThickness="0" Background="Black" Opacity="0.6" Margin="0,0,-15,0"/>
+            <Border BorderThickness="0" Background="#201F4E" Opacity="0.6" Margin="0,-80,-15,0"/>
             <StackPanel Orientation="Vertical" Margin="0,0,-15,0">
                 <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenMPage}" Content="Главная"/>
                 <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenPPage}" Content="Личный кабинет"/>
@@ -98,5 +92,6 @@
                 <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenOPage}" Content="Маг"/>
             </StackPanel>
         </Grid>
+        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="100" Source="Res/Icons/LogoKurort.png" Margin="72,0,0,0"/>
     </Grid>
 </Window>
