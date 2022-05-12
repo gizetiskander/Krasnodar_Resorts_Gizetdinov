@@ -59,7 +59,7 @@
                  VerticalAlignment="Top" Width="240" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="118,612,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
                    Foreground="Black" Text="Пароль " Height="26" Width="92" Grid.Column="1" FontSize="24"/>
-        <Button x:Name="btn_Image" Content="Добавить фото" Margin="118,701,200,241" Click="btn_Image_Click" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="5">
+        <Button x:Name="btn_Image" Content="Добавить фото" Margin="118,701,179,241" Click="btn_Image_Click" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
                     <Grid>
@@ -70,11 +70,11 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Image x:Name="playim" HorizontalAlignment="Left" Height="100" Margin="300,701,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" 
+        <Image x:Name="playim" HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top" Width="112" Grid.Column="1" 
                RenderTransformOrigin="0.84,0.515" />
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="46"  VerticalAlignment="Top" Width="480" Grid.ColumnSpan="2"/>
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="29"  VerticalAlignment="Top" Width="474" Margin="0,967,0,0" Grid.ColumnSpan="2"/>
-        <Button x:Name="btn_ImageDel" Content="Удалить фото" Margin="118,769,200,162" Click="btnImageDel_Click" Grid.ColumnSpan="2" 
+        <Button x:Name="btn_ImageDel" Content="Удалить фото" Margin="118,769,179,162" Click="btnImageDel_Click" Grid.ColumnSpan="2" 
                 BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
@@ -86,5 +86,6 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Rectangle Grid.ColumnSpan="2" Fill="Transparent" Stroke="Black" StrokeThickness="3"  HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top" Width="112"/>
     </Grid>
 </Window>

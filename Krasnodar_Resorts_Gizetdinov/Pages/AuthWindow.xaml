@@ -16,18 +16,18 @@
                 <ControlTemplate  TargetType="Button">
                     <Grid>
                         <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E"/>
-                        <Label Content="{TemplateBinding Content}" Foreground="White" HorizontalAlignment="Center"
+                        <Label Content="{TemplateBinding Content}" Foreground="White" FontSize="20" HorizontalAlignment="Center"
                                VerticalAlignment="Center"></Label>
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="89,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Email" FontWeight="Bold" Height="21"/>
-        <TextBlock HorizontalAlignment="Left" Margin="89,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Пароль" FontWeight="Bold" Height="22"/>
+        <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="89,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Email" FontWeight="Bold" Height="21"/>
+        <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="89,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Пароль" FontWeight="Bold" Height="22"/>
         <Image HorizontalAlignment="Left" Height="353" Margin="62,52,0,0" VerticalAlignment="Top" Width="299" Source="Res/Icons/PersIcon.png"/>
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="46"  Margin="0,1,0,0" VerticalAlignment="Top" Width="428"/>
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="68"  Margin="-6,830,0,0" VerticalAlignment="Top" Width="428"/>
-        <Image HorizontalAlignment="Left" Height="121" Margin="129,830,0,-53"  VerticalAlignment="Top" Width="181" Source="Res/Icons/IconKurort.png">
+        <Image HorizontalAlignment="Left"  Height="121" Margin="129,830,0,-53"  VerticalAlignment="Top" Width="181" Source="Res/Icons/IconKurort.png">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="IconKurort.png" Stretch="None"/>
             </Image.OpacityMask>
