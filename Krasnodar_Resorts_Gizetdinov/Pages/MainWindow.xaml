@@ -73,24 +73,61 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="222"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Frame Grid.ColumnSpan="10" Grid.RowSpan="10" NavigationUIVisibility="Hidden" Content="{Binding CurPage}"/>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Top"
+            Stretch="Fill" Source="Res/Background/KurortBackground.png" Height="450" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Frame Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden" Content="{Binding CurPage}"/>
 
-        <Grid Name="SlideMenu" Grid.Column="0" Grid.Row="1" Background="Transparent">
+        <Grid x:Name="SlideMenu" Grid.Column="0" Grid.Row="1" Background="Transparent">
             <Border BorderThickness="1, 0, 0, 1" BorderBrush="Transparent" Margin="0,0,-15,0"/>
             <Border BorderThickness="0" Background="#201F4E" Opacity="0.6" Margin="0,-80,-15,0"/>
             <StackPanel Orientation="Vertical" Margin="0,0,-15,0">
-                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenMPage}" Content="Главная"/>
-                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenOPage}" Content="Заказы"/>
-                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenSPage}" Content="Акции"/>
-                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenIPage}" Content="Информация"/>
-                <Button Template="{StaticResource ResourceKey=SLideMenuBtn}" Command="{Binding OpenPPage}" Content="Личный кабинет"/>
+                <Button Command="{Binding OpenMPage}" Content="Главная">
+                    <Button.Resources>
+                        <ImageSource x:Key="Img">Res/Icons/home1.png</ImageSource>
+                    </Button.Resources>
+                    <Button.Template>
+                        <StaticResource ResourceKey="SLideMenuBtn"/>
+                    </Button.Template>
+                </Button>
+                <Button Command="{Binding OpenOPage}" Content="Заказы">
+                    <Button.Resources>
+                        <ImageSource x:Key="Img">Res/Icons/service.png</ImageSource>
+                    </Button.Resources>
+                    <Button.Template>
+                        <StaticResource ResourceKey="SLideMenuBtn"/>
+                    </Button.Template>
+                </Button>
+                <Button Command="{Binding OpenSPage}" Content="Акции">
+                    <Button.Resources>
+                        <ImageSource x:Key="Img">Res/Icons/sale.png</ImageSource>
+                    </Button.Resources>
+                    <Button.Template>
+                        <StaticResource ResourceKey="SLideMenuBtn"/>
+                    </Button.Template>
+                </Button>
+                <Button Command="{Binding OpenIPage}" Content="Информация">
+                    <Button.Resources>
+                        <ImageSource x:Key="Img">Res/Icons/info.png</ImageSource>
+                    </Button.Resources>
+                    <Button.Template>
+                        <StaticResource ResourceKey="SLideMenuBtn"/>
+                    </Button.Template>
+                </Button>
+                <Button Command="{Binding OpenPPage}" Content="Личный кабинет">
+                    <Button.Resources>
+                        <ImageSource x:Key="Img">Res/Icons/pers.png</ImageSource>
+                    </Button.Resources>
+                    <Button.Template>
+                        <StaticResource ResourceKey="SLideMenuBtn"/>
+                    </Button.Template>
+                </Button>
             </StackPanel>
         </Grid>
         <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="100" Source="Res/Icons/LogoKurort.png" Margin="72,0,0,0"/>

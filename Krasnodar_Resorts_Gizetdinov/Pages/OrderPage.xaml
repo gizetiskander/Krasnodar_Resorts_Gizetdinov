@@ -9,6 +9,20 @@
       Title="OrderPage">
 
     <Grid>
-        
+        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="557" Margin="233,59,0,0"/>
+        <ListView x:Name="ServList" Margin="250,172,25,50" BorderBrush="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image x:Name="image_Icon" Source=""/>
+                        <TextBlock x:Name="textblock_Cost"/>
+                        <TextBlock x:Name="textblock_Description"/>
+                        <Button x:Name="btn_Pay"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Image HorizontalAlignment="Left" Height="113" Margin="449,59,0,0" Source="Res/Background/Order.png" VerticalAlignment="Top" Width="114"/>
+
     </Grid>
 </Page>
