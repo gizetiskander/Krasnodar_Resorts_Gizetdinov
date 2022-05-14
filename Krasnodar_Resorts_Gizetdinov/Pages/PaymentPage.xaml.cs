@@ -24,5 +24,25 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             InitializeComponent();
         }
+
+        private void TarifCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void PaymentCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btn_Pay_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

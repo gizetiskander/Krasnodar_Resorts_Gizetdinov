@@ -1,8 +1,7 @@
 ﻿<Application x:Class="Krasnodar_Resorts_Gizetdinov.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov"
-             StartupUri="Pages/RegWindow.xaml">
+             xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov">
     <Application.Resources>
          
     </Application.Resources>

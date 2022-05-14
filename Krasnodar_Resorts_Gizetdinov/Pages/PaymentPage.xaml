@@ -43,7 +43,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="641,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
             Foreground="Black" Height="17" Width="74" RenderTransformOrigin="0.963,9.875" FontSize="14" Text="Цена"/>
             <ComboBox x:Name="TarifCB" HorizontalAlignment="Left" FontSize="10" Margin="641,161,0,0" VerticalAlignment="Top" Width="149" Height="28" Background="White" 
-                  Foreground="Black" BorderBrush="#201F4E" BorderThickness="3" SelectionChanged="GraveCB_SelectionChanged">
+                  Foreground="Black" BorderBrush="#201F4E" BorderThickness="3" SelectionChanged="TarifCB_SelectionChanged">
                 <ComboBox.ItemTemplate >
                     <DataTemplate  >
                         <TextBlock Background="White" x:Name="Service_Name"  Text="{Binding Graveyard_Name}"/>
