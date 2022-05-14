@@ -7,8 +7,86 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PaymentPage">
+    <Page.Resources>
+            <Style x:Key="MyButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Page.Resources>
 
-    <Grid>
-        
+        <Grid>
+            <Image HorizontalAlignment="Left" Height="140" Margin="485,0,0,0" VerticalAlignment="Top" Width="125" Source="Res/Subjects/coin.png"/>
+            <TextBox x:Name="UserNameTB" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="295,161,0,0" Background="White" TextWrapping="Wrap" Text="" 
+            VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
+            <TextBlock HorizontalAlignment="Left" Margin="295,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="ФИО" Height="17" Width="55" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
+            <TextBlock HorizontalAlignment="Left" Margin="471,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="Услуга" Height="17" Width="55" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
+            <TextBlock HorizontalAlignment="Left" Margin="641,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Height="17" Width="74" RenderTransformOrigin="0.963,9.875" FontSize="14"><Run Text="Кладбищ"/><Run Text="е"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="295,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="Способы оплаты" Height="17" Width="113" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
+            <TextBox x:Name="Card" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="471,247,0,0" Background="White" TextWrapping="Wrap" Text="" 
+            VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
+            <TextBlock HorizontalAlignment="Left" Margin="471,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Height="17" Width="155" RenderTransformOrigin="0.963,9.875" FontSize="14"><Run Text="Номер Карты\"/><Run Text="Телефона"/></TextBlock>
+            <TextBox x:Name="PriceTB" HorizontalAlignment="Left" Height="28" IsEnabled="False" FontSize="10" Margin="641,247,0,0" Background="White" TextWrapping="Wrap" Text="" 
+            VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3" Opacity="0.99"/>
+            <TextBlock HorizontalAlignment="Left" Margin="641,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Height="17" Width="74" RenderTransformOrigin="0.963,9.875" FontSize="14" Text="Цена"/>
+            <ComboBox x:Name="TarifCB" HorizontalAlignment="Left" FontSize="10" Margin="641,161,0,0" VerticalAlignment="Top" Width="149" Height="28" Background="White" 
+                  Foreground="Black" BorderBrush="#201F4E" BorderThickness="3" SelectionChanged="GraveCB_SelectionChanged">
+                <ComboBox.ItemTemplate >
+                    <DataTemplate  >
+                        <TextBlock Background="White" x:Name="Service_Name"  Text="{Binding Graveyard_Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <ComboBox x:Name="PaymentCB" HorizontalAlignment="Left" Margin="295,247,0,0" FontSize="10" VerticalAlignment="Top" Width="149" Height="28" Background="White" 
+                  Foreground="Black"  BorderBrush="#201F4E" BorderThickness="3" SelectionChanged="PaymentCB_SelectionChanged" >
+                <ComboBox.ItemTemplate >
+                    <DataTemplate  >
+                        <TextBlock Background="White" x:Name="Service_Name"  Text="{Binding Name_PaymentType}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button x:Name="btn_Pay" Content="Купить" FontSize="10" Click="btn_Pay_Click" BorderBrush="Black" BorderThickness="3" Margin="475,338,180,79" RenderTransformOrigin="0.5,0.5" Height="Auto">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.584"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Template>
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E"  Stroke="Black" StrokeThickness="3"/>
+                            <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" FontSize="10"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="Exit" BorderBrush="Transparent"
+            Focusable="False" Width="32" Height="31" Click="Exit_Click"
+            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="235,419,533,0" RenderTransformOrigin="1.778,2.356" Cursor="Hand">
+                <Button.Background >
+                    <ImageBrush ImageSource="Res/Icons/close.png"/>
+                </Button.Background>
+            </Button>
+        <TextBox x:Name="CityTB" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="471,161,0,0" Background="White" TextWrapping="Wrap" Text="" 
+                VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
+
     </Grid>
 </Page>

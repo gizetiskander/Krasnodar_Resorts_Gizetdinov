@@ -9,6 +9,43 @@
       Title="PersonalPage">
 
     <Grid>
-        
+        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="262" VerticalAlignment="Top" Width="436" Margin="279,90,0,0"/>
+        <Image HorizontalAlignment="Left" Height="82" Margin="343,145,0,0" VerticalAlignment="Top" Width="79" />
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="100" Margin="334,133,0,0" RadiusY="10" RadiusX="10" Stroke="#201F4E" StrokeThickness="3" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="UserNameTB" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="493,146,0,0" Background="White" TextWrapping="Wrap" Text="" 
+            VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="ФИО" Height="17" Width="55" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
+        <TextBox x:Name="TelephoneTB" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="493,199,0,0" Background="White" TextWrapping="Wrap" Text="" 
+            VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="Телефон" Height="17" Width="65" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
+        <TextBox x:Name="TelephoneTB_Copy" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="493,250,0,0" Background="White" TextWrapping="Wrap" Text="" 
+            VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="Email" Height="17" Width="65" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
+        <Button x:Name="btn_Password" Content="Изменить пароль" FontSize="10" Click="btn_Password_Click" BorderBrush="Black" BorderThickness="3" Margin="500,296,155,120" RenderTransformOrigin="0.5,0.5" Height="Auto">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.584"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E"  Stroke="Black" StrokeThickness="3"/>
+                        <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" FontSize="10"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="382,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="Личный кабинет" Height="27" Width="244" RenderTransformOrigin="0.963,9.875" FontSize="30"/>
+
     </Grid>
 </Page>

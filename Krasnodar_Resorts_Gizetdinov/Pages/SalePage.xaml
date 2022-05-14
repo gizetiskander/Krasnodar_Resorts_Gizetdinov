@@ -9,6 +9,20 @@
       Title="SalePage">
 
     <Grid>
-        
+        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="316" VerticalAlignment="Top" Width="414" Margin="292,58,0,0"/>
+        <Image HorizontalAlignment="Left" Height="153" Margin="421,69,0,0" VerticalAlignment="Top" Width="164" Source="Res/Icons/Saleicon.png"/>
+        <ListView x:Name="SaleList" Margin="308,184,105,90" BorderBrush="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image x:Name="image_Icon" Source=""/>
+                        <TextBlock x:Name="textblock_Cost"/>
+                        <TextBlock x:Name="textblock_Description"/>
+                        <Button x:Name="btn_Pay"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </Grid>
 </Page>

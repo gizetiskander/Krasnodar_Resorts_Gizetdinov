@@ -24,5 +24,10 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             InitializeComponent();
         }
+
+        private void btn_Password_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
