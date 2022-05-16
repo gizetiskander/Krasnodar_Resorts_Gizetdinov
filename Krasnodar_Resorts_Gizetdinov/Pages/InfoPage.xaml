@@ -11,17 +11,25 @@
       Title="InfoPage">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" FontSize="13" Margin="218,116,0,0" TextWrapping="Wrap" Text="Куро́рты Краснода́рского кра́я (Куро́рты Куба́ни) — российский бренд, используемый для популяризации отдыха на Азовском и Черноморском побережьях Краснодарского края. В его рамках на российском и международном уровне продвигаются курортные города и рекреационные местности Кубани.
+        <TextBlock HorizontalAlignment="Left" FontSize="13" Margin="242,86,0,0" TextWrapping="Wrap" FontWeight="Bold" Text="Куро́рты Краснода́рского кра́я (Куро́рты Куба́ни) — российский бренд, используемый для популяризации отдыха на Азовском и Черноморском побережьях Краснодарского края. В его рамках на российском и международном уровне продвигаются курортные города и рекреационные местности Кубани.
 
 Проект получил широкое распространение в 2002 году. В результате его реализации количество туристов в период с 2002 по 2009 гг. выросло с 5 до 12 миллионов человек в год, а общий объём инвестиций в экономику края — с 67 до 320 млрд рублей.
 
 Высокий сезон длится с июня по начало октября. В это время наибольшим спросом пользуется пляжный отдых. Главными морскими курортами являются Сочи, Анапа и Геленджик.
 
-В межсезонье наибольшим спросом пользуются оздоровительные программы отдыха. В крае расположено 420 санаториев, которые круглогодично предлагают свои лечебные услуги." VerticalAlignment="Top" Height="196" Width="572"/>
-        <TextBlock HorizontalAlignment="Left" FontSize="22" Margin="218,73,0,0" Foreground="#f3ac10" TextWrapping="Wrap" Text="Куро́рты Краснода́рского кра́я (Куро́рты Куба́ни) — " VerticalAlignment="Top" Height="43" Width="582"/>
-        <TextBlock HorizontalAlignment="Left" Margin="319,0,0,0" TextWrapping="Wrap" Text="Полезная информация " Foreground="#f3ac10" FontSize="32" VerticalAlignment="Top"/>
+В межсезонье наибольшим спросом пользуются оздоровительные программы отдыха. В крае расположено 420 санаториев, которые круглогодично предлагают свои лечебные услуги." VerticalAlignment="Top" Height="212" Width="548"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="22" Margin="242,43,0,0" Foreground="#f3ac10" TextWrapping="Wrap" Text="Куро́рты Краснода́рского кра́я (Куро́рты Куба́ни) — " VerticalAlignment="Top" Height="43" Width="558"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,0,0,0" TextWrapping="Wrap" Text="Полезная информация " Foreground="#f3ac10" FontSize="32" VerticalAlignment="Top"/>
         <Grid Margin="219,290,0,0">
-            <m:Map Mode="Road" ZoomLevel="16" Center="45.42312686567592, 36.76996656158725" Margin="0,22,0,0">
+            <m:Map CredentialsProvider="AkGCeGKLPUkRM9zqbQYaR4Mqkjmd8iAvubmKsFvLSE6d3ebmEnB4PyRz6s2A3UdZ" Mode="Road" ZoomLevel="16" Center="45.42312686567592, 36.76996656158725" Margin="16,5,0,0" RenderTransformOrigin="0.5,0.5">
+                <m:Map.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.294"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.328"/>
+                    </TransformGroup>
+                </m:Map.RenderTransform>
                 <Canvas
                 m:MapLayer.Position="45.42312686567592, 36.76996656158725"
                 m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30">

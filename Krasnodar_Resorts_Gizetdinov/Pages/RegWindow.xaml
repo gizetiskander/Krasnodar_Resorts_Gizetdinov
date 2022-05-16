@@ -23,7 +23,7 @@
         <Image HorizontalAlignment="Left" Height="350" Margin="96,89,0,0" VerticalAlignment="Top" Width="285" Grid.Column="1" Source="Res/Icons/LogoKurort.png" />
         <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="46" Margin="115,393,0,0" TextWrapping="Wrap" Text="" 
                  VerticalAlignment="Top" Width="240" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Grid.Column="1"/>
-        <TextBox x:Name="Login" HorizontalAlignment="Left" Height="46" Margin="115,476,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="Phone" HorizontalAlignment="Left" Height="46" Margin="115,476,0,0" TextWrapping="Wrap" Text="" 
                  VerticalAlignment="Top" Width="240" FontSize="30" Grid.Column="1" BorderBrush="#201F4E" BorderThickness="5"/>
         <Button x:Name="Sign_In" Content="Регистрация" Margin="110,825,93,100" Click="Sign_In_Click" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="5">
             <Button.Template>
@@ -47,7 +47,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="46" Margin="115,554,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="46" Margin="115,554,0,0" TextWrapping="Wrap" Text="" 
                  VerticalAlignment="Top" Width="240" Grid.Column="1" FontSize="30" BorderBrush="#201F4E" BorderThickness="5"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
                    Foreground="Black" Text="ФИО" Height="26" Width="84" RenderTransformOrigin="0.963,9.875" Grid.Column="1" FontSize="24"/>
@@ -55,7 +55,7 @@
                    Foreground="Black" Text="Телефон" Height="33" Width="95" RenderTransformOrigin="0.618,0.875" Grid.Column="1" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular"
                    Foreground="Black" Text="Email" Height="29" Width="60" Grid.Column="1" FontSize="24"/>
-        <TextBox x:Name="About" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Margin="118,638,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Margin="118,638,0,0" TextWrapping="Wrap" Text="" 
                  VerticalAlignment="Top" Width="240" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="118,612,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
                    Foreground="Black" Text="Пароль " Height="26" Width="92" Grid.Column="1" FontSize="24"/>

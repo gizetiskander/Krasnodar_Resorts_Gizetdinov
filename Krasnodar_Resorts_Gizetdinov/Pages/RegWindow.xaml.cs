@@ -1,6 +1,8 @@
-﻿using Microsoft.Win32;
+﻿using Krasnodar_Resorts_Gizetdinov.Classes;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     /// </summary>
     public partial class RegWindow : Window
     {
+        OpenFileDialog ofdImage = new OpenFileDialog();
         public RegWindow()
         {
             InitializeComponent();
@@ -28,7 +31,6 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void btn_Image_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog ofdImage = new OpenFileDialog();
             ofdImage.Filter = "Image files|*.bmp;*.jpg;*.png|All files|*.*";
             ofdImage.FilterIndex = 1;
             if (ofdImage.ShowDialog() == true)
@@ -50,7 +52,17 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void Sign_In_Click(object sender, RoutedEventArgs e)
         {
-
+            Users us = new Users(Convert.ToString(UserName.Text),
+                                 Convert.ToString(Phone.Text),
+                                 Convert.ToString(Email.Text),
+                                 double.Parse(Phone.Text),
+                                 Convert.ToString("2"),
+                                 File.ReadAllBytes(ofdImage.FileName));
+            us.Add(us);
+            MessageBox.Show("Занесено в базу!");
+            MainWindow main = new MainWindow();
+            this.Close();
+            main.Show();
         }
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)

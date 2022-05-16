@@ -9,8 +9,8 @@
       Title="OrderPage">
 
     <Grid>
-        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="557" Margin="233,59,0,0"/>
-        <ListView x:Name="ServList" Margin="250,172,25,50" BorderBrush="White">
+        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="540" Margin="250,59,0,0"/>
+        <ListView x:Name="ServList" Margin="264,172,25,50" BorderBrush="White">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
