@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,6 +19,14 @@ using System.Windows.Shapes;
 
 namespace Krasnodar_Resorts_Gizetdinov.Pages
 {
+    public static class ValidatorExtensions
+    {
+        public static bool IsValidEmailAddress(this string s)
+        {
+            Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            return regex.IsMatch(s);
+        }
+    }
     /// <summary>
     /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
@@ -71,6 +80,11 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             this.Close();
             auth.Show();
 
+        }
+
+        private void Email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            bool result = ValidatorExtensions.IsValidEmailAddress(Email.Text);
         }
     }
 }

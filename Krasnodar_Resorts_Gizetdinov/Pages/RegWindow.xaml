@@ -47,7 +47,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="46" Margin="115,554,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="46" Margin="115,554,0,0" TextWrapping="Wrap" Text="" TextChanged="Email_TextChanged" 
                  VerticalAlignment="Top" Width="240" Grid.Column="1" FontSize="30" BorderBrush="#201F4E" BorderThickness="5"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
                    Foreground="Black" Text="ФИО" Height="26" Width="84" RenderTransformOrigin="0.963,9.875" Grid.Column="1" FontSize="24"/>
