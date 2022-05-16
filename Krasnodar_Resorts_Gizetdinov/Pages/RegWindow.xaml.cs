@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,12 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public static bool IsValidEmailAddress(this string s)
         {
             Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            return regex.IsMatch(s);
+        }
+
+        public static bool IsValidPhone(this string s)
+        {
+            Regex regex = new Regex(@"^(\+[0-9]{9})$");
             return regex.IsMatch(s);
         }
     }
@@ -62,8 +69,8 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         private void Sign_In_Click(object sender, RoutedEventArgs e)
         {
             Users us = new Users(Convert.ToString(UserName.Text),
-                                 Convert.ToString(Phone.Text),
                                  Convert.ToString(Email.Text),
+                                 Convert.ToString(Password.Text),
                                  double.Parse(Phone.Text),
                                  Convert.ToString("2"),
                                  File.ReadAllBytes(ofdImage.FileName));
@@ -85,6 +92,12 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         private void Email_TextChanged(object sender, TextChangedEventArgs e)
         {
             bool result = ValidatorExtensions.IsValidEmailAddress(Email.Text);
+        }
+
+
+        private void Phone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            bool result = ValidatorExtensions.IsValidPhone(Phone.Text);
         }
     }
 }
