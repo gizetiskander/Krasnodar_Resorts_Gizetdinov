@@ -17,11 +17,11 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
         protected string Name;
         protected string Email;
         protected string Password;
-        protected double Phone;
+        protected string Phone;
         protected string Role;
         protected byte[] Image;
 
-        public Users(string v1, string v2, string v3, double v4, string v5, byte[] v6)
+        public Users(string v1, string v2, string v3, string v4, string v5, byte[] v6)
         {
             this.Name = v1;
             this.Email = v2;
@@ -41,7 +41,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
         [BsonElement]
         public string _password { get => Password; set => Password = value; }
         [BsonElement]
-        public double _phone { get => Phone; set => Phone = value; }
+        public string _phone { get => Phone; set => Phone = value; }
         [BsonElement]
         public string _role { get => Role; set => Role = value; }
         [BsonElement]

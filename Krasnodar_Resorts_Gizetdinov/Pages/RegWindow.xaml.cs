@@ -68,17 +68,24 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void Sign_In_Click(object sender, RoutedEventArgs e)
         {
-            Users us = new Users(Convert.ToString(UserName.Text),
-                                 Convert.ToString(Email.Text),
-                                 Convert.ToString(Password.Text),
-                                 double.Parse(Phone.Text),
-                                 Convert.ToString("2"),
-                                 File.ReadAllBytes(ofdImage.FileName));
-            us.Add(us);
-            MessageBox.Show("Занесено в базу!");
-            MainWindow main = new MainWindow();
-            this.Close();
-            main.Show();
+            if(Email.Text == "" || Password.Text == "")
+            {
+                MessageBox.Show("Введите ваши данные!");
+            }
+            else
+            {
+                Users us = new Users(Convert.ToString(UserName.Text),
+                                     Convert.ToString(Email.Text),
+                                     Convert.ToString(Password.Text),
+                                     Convert.ToString(Phone.Text),
+                                     Convert.ToString("2"),
+                                     File.ReadAllBytes(ofdImage.FileName));
+                us.Add(us);
+                MessageBox.Show("Занесено в базу!");
+                AuthWindow auth = new AuthWindow();
+                this.Close();
+                auth.Show();
+            }
         }
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
