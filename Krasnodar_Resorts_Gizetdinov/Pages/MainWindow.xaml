@@ -128,6 +128,14 @@
                         <StaticResource ResourceKey="SLideMenuBtn"/>
                     </Button.Template>
                 </Button>
+                <Button x:Name="btn_Admin" Command="{Binding OpenAPage}" Content="Админ" >
+                    <Button.Resources>
+                        <ImageSource x:Key="Img">Res/Icons/PutinIcon.png</ImageSource>
+                    </Button.Resources>
+                    <Button.Template>
+                        <StaticResource ResourceKey="SLideMenuBtn"/>
+                    </Button.Template>
+                </Button>
             </StackPanel>
         </Grid>
         <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="100" Source="Res/Icons/LogoKurort.png" Margin="72,0,0,0"/>

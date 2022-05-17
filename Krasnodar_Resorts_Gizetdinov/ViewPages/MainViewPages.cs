@@ -17,12 +17,21 @@ namespace Krasnodar_Resorts_Gizetdinov.ViewPages
         private Page SalePage = new SalePage();
         private Page InfoPage = new InfoPage();
         private Page PersonalPage = new PersonalPage();
+        private Page AdminPage = new AdminPage();
         private Page _CurPage = new MainPage();
 
         public Page CurPage
         {
             get => _CurPage;
             set => Set(ref _CurPage, value);
+        }
+
+        public ICommand OpenAPage
+        {
+            get
+            {
+                return new RelayCommand(() => CurPage = AdminPage);
+            }
         }
 
         public ICommand OpenMPage

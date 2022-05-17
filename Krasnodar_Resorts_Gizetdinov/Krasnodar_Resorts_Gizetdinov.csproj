@@ -168,6 +168,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Users.cs" />
+    <Compile Include="Pages\AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>
     </Compile>
@@ -179,6 +182,10 @@
     </Compile>
     <Compile Include="ViewPages\MainViewPages.cs" />
     <Compile Include="ViewPages\PagesFoundation.cs" />
+    <Page Include="Pages\AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -298,6 +305,8 @@
     <Resource Include="Pages\Res\Icons\LogoKurort.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Pages\Res\Icons\PutinIcon.png" />
+    <Resource Include="Pages\Res\Icons\AdminIcon.png" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />

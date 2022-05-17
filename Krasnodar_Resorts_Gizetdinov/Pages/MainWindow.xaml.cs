@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Krasnodar_Resorts_Gizetdinov.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MongoDB.Driver;
 
 namespace Krasnodar_Resorts_Gizetdinov.Pages
 {
@@ -20,6 +22,9 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     /// </summary>
     public partial class MainWindow : Window
     {
+        MongoClient client = new MongoClient();
+
+        Users users = new Users();
         public MainWindow()
         {
             InitializeComponent();
@@ -32,5 +37,6 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                 DragMove();
             }
         }
+
     }
 }
