@@ -70,6 +70,18 @@
                 </Border>
             </Grid>
         </ControlTemplate>
+        <Style x:Key="MyButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -139,5 +151,12 @@
             </StackPanel>
         </Grid>
         <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="100" Source="Res/Icons/LogoKurort.png" Margin="72,0,0,0"/>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="Exit" BorderBrush="Transparent"
+            Focusable="False" Width="38" Height="36" Click="Exit_Click"
+            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="530,10,10,34" RenderTransformOrigin="1.778,2.356" Cursor="Hand" Grid.Column="1">
+            <Button.Background >
+                <ImageBrush ImageSource="Res/Icons/exit.png"  />
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

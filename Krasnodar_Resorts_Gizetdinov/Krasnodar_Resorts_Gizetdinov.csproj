@@ -167,6 +167,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Resorts.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Pages\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
@@ -281,7 +282,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Pages\IconKurort.png" />
+    <Resource Include="Pages\Res\Icons\IconKurort.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Res\Background\KurortBackground.png" />
@@ -305,6 +306,7 @@
     <Resource Include="Pages\Res\Icons\LogoKurort.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Pages\Res\Icons\exit.png" />
     <Resource Include="Pages\Res\Icons\PutinIcon.png" />
     <Resource Include="Pages\Res\Icons\AdminIcon.png" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />

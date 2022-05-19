@@ -28,11 +28,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             return regex.IsMatch(s);
         }
 
-        public static bool IsValidPhone(this string s)
-        {
-            Regex regex = new Regex(@"^(\+[0-9]{9})$");
-            return regex.IsMatch(s);
-        }
+      
     }
     /// <summary>
     /// Логика взаимодействия для RegWindow.xaml
@@ -102,9 +98,10 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         }
 
 
-        private void Phone_TextChanged(object sender, TextChangedEventArgs e)
+        private void Phone_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            bool result = ValidatorExtensions.IsValidPhone(Phone.Text);
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

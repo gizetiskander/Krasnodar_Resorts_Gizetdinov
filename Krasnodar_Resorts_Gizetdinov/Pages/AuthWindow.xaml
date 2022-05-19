@@ -29,7 +29,7 @@
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="77"  Margin="-6,821,0,0" VerticalAlignment="Top" Width="428"/>
         <Image HorizontalAlignment="Left"  Height="192" Margin="116,761,0,-55"  VerticalAlignment="Top" Width="194" Source="Res/Icons/IconKurort1.png" RenderTransformOrigin="0.5,0.5">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="IconKurort.png" Stretch="None"/>
+                <ImageBrush ImageSource="Res/Icons/IconKurort.png" Stretch="None"/>
             </Image.OpacityMask>
         </Image>
     </Grid>
