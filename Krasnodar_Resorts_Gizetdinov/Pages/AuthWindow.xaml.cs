@@ -26,6 +26,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public static MongoClient client = new MongoClient();
   
         public static Users users = new Users();
+
         public AuthWindow()
         {
             InitializeComponent();
@@ -71,7 +72,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
-            Auth(Login.Text, Password.Password); ;
+            Auth(Login.Text, Password.Password); 
 
         }
     }
