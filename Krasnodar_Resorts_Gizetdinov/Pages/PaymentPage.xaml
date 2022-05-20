@@ -38,7 +38,7 @@
             VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
             <TextBlock HorizontalAlignment="Left" Margin="471,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
             Foreground="Black" Height="17" Width="155" RenderTransformOrigin="0.963,9.875" FontSize="14"><Run Text="Номер Карты\"/><Run Text="Телефона"/></TextBlock>
-            <TextBox x:Name="PriceTB" HorizontalAlignment="Left" Height="28" IsEnabled="False" FontSize="10" Margin="641,247,0,0" Background="White" TextWrapping="Wrap" Text="" 
+            <TextBox x:Name="PriceTB" HorizontalAlignment="Left" Height="28" IsReadOnly="True" FontSize="10" Margin="641,247,0,0" Background="White" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3" Opacity="0.99"/>
             <TextBlock HorizontalAlignment="Left" Margin="641,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
             Foreground="Black" Height="17" Width="74" RenderTransformOrigin="0.963,9.875" FontSize="14" Text="Цена"/>

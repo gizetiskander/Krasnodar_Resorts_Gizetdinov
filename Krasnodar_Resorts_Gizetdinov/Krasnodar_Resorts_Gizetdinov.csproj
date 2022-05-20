@@ -167,6 +167,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\ListResort.cs" />
     <Compile Include="Classes\Resorts.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Pages\AdminPage.xaml.cs">
