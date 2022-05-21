@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using Krasnodar_Resorts_Gizetdinov.Pages;
 using System.Windows.Input;
+using Krasnodar_Resorts_Gizetdinov.Classes;
 
 namespace Krasnodar_Resorts_Gizetdinov.ViewPages
 {
@@ -16,7 +17,7 @@ namespace Krasnodar_Resorts_Gizetdinov.ViewPages
         private Page OrderPage = new OrderPage();
         private Page SalePage = new SalePage();
         private Page InfoPage = new InfoPage();
-        private Page PersonalPage = new PersonalPage();
+        private Page PersonalPage = new PersonalPage(AuthWindow.usclick);
         private Page AdminPage = new AdminPage();
         private Page _CurPage = new MainPage();
 

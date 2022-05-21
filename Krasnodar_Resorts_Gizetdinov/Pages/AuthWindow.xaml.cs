@@ -26,7 +26,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public static MongoClient client = new MongoClient();
   
         public static Users users = new Users();
-
+        public static Users usclick;
         public AuthWindow()
         {
             InitializeComponent();
@@ -47,6 +47,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                 else if (listPerson._email == nickname && listPerson._password == password && listPerson._role == "1")
                 {
                     MessageBox.Show($"Добро пожаловать администратор: {listPerson._name} ");
+                    usclick = listPerson;
                     MainWindow mainWindow = new MainWindow();
                     this.Close();
                     mainWindow.Show();
@@ -56,6 +57,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                 else if (listPerson._email == nickname && listPerson._password == password && listPerson._role == "2")
                 {
                     MessageBox.Show($"Добро пожаловать пользователь:  {listPerson._name}");
+                    usclick = listPerson;
                     MainWindow mainWindow = new MainWindow();
                     this.Close();
                     mainWindow.Show();
