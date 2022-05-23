@@ -23,7 +23,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     public partial class InsertPaswordPage : Page
     {
         public static MongoClient client = new MongoClient();
-        Users us;
+        
 
     
         public InsertPaswordPage()
@@ -38,26 +38,63 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             {
                 MessageBox.Show("Введите ваши данные!");
             }
-            else 
+            else
             {
                 var abase = client.GetDatabase("Krasnodar_resorts");
                 var b = abase.GetCollection<Users>("Users");
+                var filter = Builders<Users>.Filter.Eq("Id", AuthWindow.usclick.Id);
+                var update = Builders<Users>.Update.Set("_password", NewPasswordTB.Text);
+                var result = b.UpdateOne(filter, update);
                 MessageBox.Show("Пароль изменен!");
-            }
+                NavigationService.GoBack();
+            }            
             
 
         }
 
-
-        private void OldPasswordTB_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void OldPasswordTB_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (OldPasswordTB.Text == AuthWindow.usclick._password)
             {
-                MessageBox.Show("Пароль верный!");
+                OldPasswordMessageTB.Text = "Пароль верный!";
+                OldPasswordMessageTB.Foreground = new SolidColorBrush(Colors.Green);
             }
             else
             {
-                MessageBox.Show("Пароль не верный!");
+                OldPasswordMessageTB.Text = "Пароль неверный!";
+                OldPasswordMessageTB.Foreground = new SolidColorBrush(Colors.Red);
+            }
+        }
+
+        private void ConfirmPasswordTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (ConfirmPasswordTB.Text == NewPasswordTB.Text)
+            {
+                ConfirmPasswordMessageTB.Text = "Пароль совпал!";
+                btn_InsertPassword.IsEnabled = true;
+                ConfirmPasswordMessageTB.Foreground = new SolidColorBrush(Colors.Green);
+            }
+            else
+            {
+                ConfirmPasswordMessageTB.Text = "Пароль не совпадает!";
+                btn_InsertPassword.IsEnabled = false;
+                ConfirmPasswordMessageTB.Foreground = new SolidColorBrush(Colors.Red);
+            }
+        }
+
+        private void NewPasswordTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (ConfirmPasswordTB.Text == NewPasswordTB.Text)
+            {
+                ConfirmPasswordMessageTB.Text = "Пароль совпал!";
+                btn_InsertPassword.IsEnabled = true;
+                ConfirmPasswordMessageTB.Foreground = new SolidColorBrush(Colors.Green);
+            }
+            else
+            {
+                ConfirmPasswordMessageTB.Text = "Пароль не совпадает!";
+                btn_InsertPassword.IsEnabled = false;
+                ConfirmPasswordMessageTB.Foreground = new SolidColorBrush(Colors.Red);
             }
         }
     }

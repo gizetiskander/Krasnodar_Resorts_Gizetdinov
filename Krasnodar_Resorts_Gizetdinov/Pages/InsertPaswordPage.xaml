@@ -9,20 +9,19 @@
       Title="InsertPaswordPage">
 
     <Grid>
-        <TextBox x:Name="OldPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" PreviewTextInput="OldPasswordTB_PreviewTextInput" 
-                  BorderThickness="5" Margin="403,77,0,0" TextWrapping="Wrap" Text="" 
-            VerticalAlignment="Top" Width="240"/>
+        <TextBox x:Name="OldPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" TextChanged="OldPasswordTB_TextChanged" 
+                  BorderThickness="5" Margin="403,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240"/>
         <TextBlock HorizontalAlignment="Left" Margin="403,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
             Foreground="Black" Text="Старый пароль" Height="26" Width="176" FontSize="24"/>
-        <TextBox x:Name="NewPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Margin="403,181,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="NewPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" TextChanged="NewPasswordTB_TextChanged" BorderBrush="#201F4E" BorderThickness="5" Margin="403,181,0,0" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="240"/>
-        <TextBlock HorizontalAlignment="Left" Margin="403,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
+        <TextBlock HorizontalAlignment="Left" Margin="403,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"  FontFamily="Regular"
             Foreground="Black" Text="Новый пароль" Height="26" Width="169" FontSize="24"/>
-        <TextBox x:Name="ConfirmPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Margin="403,288,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="ConfirmPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" TextChanged="ConfirmPasswordTB_TextChanged" BorderThickness="5" Margin="403,288,0,0" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="240"/>
         <TextBlock HorizontalAlignment="Left" Margin="403,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
             Foreground="Black" Height="26" Width="287" FontSize="22"><Run Text="По"/><Run Text="дтверждение пароля"/></TextBlock>
-        <Button x:Name="btn_InsertPassword" Content="Изменить пароль" FontSize="14" Click="btn_InsertPassword_Click" BorderBrush="Black" BorderThickness="3" Margin="437,361,195,43" RenderTransformOrigin="0.5,0.5" Height="Auto">
+        <Button x:Name="btn_InsertPassword" Content="Изменить пароль" FontSize="14" Click="btn_InsertPassword_Click"    BorderBrush="Black" BorderThickness="3" Margin="437,361,195,43" RenderTransformOrigin="0.5,0.5" Height="Auto">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,6 +41,8 @@
             </Button.Template>
 
         </Button>
+        <TextBox x:Name="OldPasswordMessageTB" BorderBrush="Transparent" FontSize="14" IsReadOnly="True"   HorizontalAlignment="Left" Height="23" Background="Transparent" Margin="403,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="ConfirmPasswordMessageTB" BorderBrush="Transparent" FontSize="14"  IsReadOnly="True"  HorizontalAlignment="Left" Height="23" Background="Transparent" Margin="403,334,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
 
     </Grid>
 </Page>
