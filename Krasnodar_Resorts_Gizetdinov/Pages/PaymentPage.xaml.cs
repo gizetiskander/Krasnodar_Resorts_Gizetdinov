@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Krasnodar_Resorts_Gizetdinov.Classes;
+using MongoDB.Driver;
 
 namespace Krasnodar_Resorts_Gizetdinov.Pages
 {
@@ -20,14 +22,23 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     /// </summary>
     public partial class PaymentPage : Page
     {
+
+        public static MongoClient client = new MongoClient();
+
         public PaymentPage()
         {
             InitializeComponent();
+            var abase = client.GetDatabase("Krasnodar_resorts");
+            var b = abase.GetCollection<Resorts>("Resort");
+            TarifCB.ItemsSource = b.AsQueryable();
+
         }
 
         private void TarifCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var abase = client.GetDatabase("Krasnodar_resorts");
+            var b = abase.GetCollection<Resorts>("Resort");
+            PriceTB.Text = b.AsQueryable().Where(x => x._price == TarifCB.Items.ToString()).FirstOrDefault();
         }
 
         private void PaymentCB_SelectionChanged(object sender, SelectionChangedEventArgs e)

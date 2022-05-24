@@ -46,7 +46,8 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             {
                 try
                 {
-                   
+                    var select = (Resorts)list_Service.SelectedItem;
+                    b.FindOneAndDelete(p => p.Id == select.Id);
                     list_Service.ItemsSource = b.AsQueryable().ToList();
                 }
                 catch

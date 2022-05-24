@@ -23,6 +23,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     public partial class MainPage : Page
     {
         public static MongoClient client = new MongoClient();
+        public static Resorts res;
         public MainPage()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             var b = abase.GetCollection<Resorts>("Resort");
             list_Service.ItemsSource = b.AsQueryable().ToList();
         }
+
 
         private void btn_Buy_Click(object sender, RoutedEventArgs e)
         {

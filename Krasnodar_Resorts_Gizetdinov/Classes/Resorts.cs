@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Krasnodar_Resorts_Gizetdinov.Classes
 {
-    class Resorts
+    public class Resorts
     {
         [BsonId]
         [BsonIgnoreIfDefault]
