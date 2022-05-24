@@ -53,6 +53,11 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                                      File.ReadAllBytes(ofdImage.FileName));
                 resorts.Add(resorts);
                 MessageBox.Show("Занесено в базу!");
+                MainPage main = new MainPage();
+                var abase = client.GetDatabase("Krasnodar_resorts");
+                var b = abase.GetCollection<Users>("Users");
+                var a = abase.GetCollection<Resorts>("Resort");
+                main.list_Service.ItemsSource = b.AsQueryable().ToList();
             }
         }
 
@@ -91,6 +96,11 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void btn_insert_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new InsertResortPage());
         }
     }
 }

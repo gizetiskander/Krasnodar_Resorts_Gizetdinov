@@ -59,7 +59,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btn_Create" Content="Добавить" Margin="384,405,261,-7" Click="btn_Create_Click" 
+        <Button x:Name="btn_Create" Content="Добавить" Margin="337,405,308,-7" Click="btn_Create_Click" 
             BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
@@ -72,7 +72,19 @@
             </Button.Template>
         </Button>
         <Rectangle Fill="Transparent" Stroke="Black" StrokeThickness="3"  HorizontalAlignment="Left" Height="89" Margin="515,302,0,0" VerticalAlignment="Top" Width="98"/>
-        <Button x:Name="btn_Clear" Content="Очистить" Margin="556,405,89,-7" Click="btn_Clear_Click" 
+        <Button x:Name="btn_Clear" Content="Очистить" Margin="506,405,139,-7" Click="btn_Clear_Click" 
+            BorderBrush="Black" BorderThickness="5">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" FontSize="20"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btn_insert" Content="Редактор" Margin="675,405,10,-7" Click="btn_insert_Click" 
             BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">

@@ -77,5 +77,12 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             Auth(Login.Text, Password.Password); 
 
         }
+
+        private void btn_Back_Click(object sender, RoutedEventArgs e)
+        {
+            RegWindow reg = new RegWindow();
+            this.Close();
+            reg.Show();
+        }
     }
 }

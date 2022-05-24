@@ -20,16 +20,6 @@ using System.Windows.Shapes;
 
 namespace Krasnodar_Resorts_Gizetdinov.Pages
 {
-    public static class ValidatorExtensions
-    {
-        public static bool IsValidEmailAddress(this string s)
-        {
-            Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
-            return regex.IsMatch(s);
-        }
-
-      
-    }
     /// <summary>
     /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
@@ -92,15 +82,27 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         }
 
-        private void Email_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            bool result = ValidatorExtensions.IsValidEmailAddress(Email.Text);
-        }
-
-
         private void Phone_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void UserName_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^А-Я а-я]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void Email_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void Password_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])\S{1,16}$");
             e.Handled = regex.IsMatch(e.Text);
         }
     }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov"
         xmlns:vm="clr-namespace:Krasnodar_Resorts_Gizetdinov.ViewPages"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"  WindowStyle="None"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="450" Width="800"  WindowStyle="None"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Res/Icons/LogoKurort.png">
     <Window.DataContext>
         <vm:MainViewPages/>
     </Window.DataContext>

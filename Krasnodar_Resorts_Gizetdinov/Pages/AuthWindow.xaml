@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov.Pages"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="926" Width="428" Background="White" WindowStyle="ToolWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="AuthWindow" Height="926" Width="428" Background="White" WindowStyle="ToolWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Res/Icons/close.png">
     <Grid>
         <TextBox x:Name="Login" BorderBrush="#201F4E" BorderThickness="2" HorizontalAlignment="Left" Height="41" Margin="89,405,0,0" 
                  TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="24" Width="240"/>
@@ -32,5 +32,16 @@
                 <ImageBrush ImageSource="Res/Icons/IconKurort.png" Stretch="None"/>
             </Image.OpacityMask>
         </Image>
+        <Button x:Name="btn_Back" Content="Регистрация" Margin="104,660,112,186" Click="btn_Back_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="3"/>
+                        <Label Content="{TemplateBinding Content}" Foreground="White" FontSize="20" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>
