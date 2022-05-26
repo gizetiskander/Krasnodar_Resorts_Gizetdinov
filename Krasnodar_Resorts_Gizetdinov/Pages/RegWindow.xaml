@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov.Pages"
         mc:Ignorable="d"
         Title="RegWindow"  Height="1024" Width="480" Background="White"  WindowStyle="ToolWindow"  ResizeMode="NoResize" 
-        WindowStartupLocation="CenterScreen" Icon="Res/Icons/pers.png">
+        WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="Sign-up">
             <Border CornerRadius="25" BorderBrush="Black" BorderThickness="2"

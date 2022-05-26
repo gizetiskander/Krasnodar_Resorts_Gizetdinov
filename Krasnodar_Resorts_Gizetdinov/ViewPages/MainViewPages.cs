@@ -14,7 +14,7 @@ namespace Krasnodar_Resorts_Gizetdinov.ViewPages
     internal class MainViewPages : PagesFoundation
     {
         private Page MainPage = new MainPage();
-        private Page OrderPage = new OrderPage();
+        private Page OrderPage = new OrderPage(AuthWindow.usclick);
         private Page SalePage = new SalePage();
         private Page InfoPage = new InfoPage();
         private Page PersonalPage = new PersonalPage(AuthWindow.usclick);

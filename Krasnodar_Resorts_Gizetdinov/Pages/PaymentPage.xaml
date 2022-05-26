@@ -24,7 +24,7 @@
 
     <Grid>
         <Image HorizontalAlignment="Left" Height="140" Margin="485,0,0,0" VerticalAlignment="Top" Width="125" Source="Res/Subjects/coin.png"/>
-        <TextBox x:Name="UserNameTB" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="295,161,0,0" Background="White" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="UserNameTB" HorizontalAlignment="Left" Height="28" FontSize="14" TextChanged="UserNameTB_TextChanged" Margin="295,161,0,0" Background="White" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
         <TextBlock HorizontalAlignment="Left" Margin="295,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
             Foreground="Black" Text="ФИО" Height="17" Width="55" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
@@ -32,19 +32,19 @@
             Foreground="Black" Text="Услуга" Height="17" Width="55" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
         <TextBlock HorizontalAlignment="Left" Margin="295,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
             Foreground="Black" Text="Способы оплаты" Height="17" Width="113" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
-        <TextBox x:Name="Card" HorizontalAlignment="Left" Height="28" FontSize="10" Margin="471,247,0,0" Background="White" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="Card" HorizontalAlignment="Left" Height="28" FontSize="14" Margin="471,247,0,0" MaxLength="16" PreviewTextInput="Card_PreviewTextInput"  Background="White" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3"/>
         <TextBlock HorizontalAlignment="Left" Margin="471,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
             Foreground="Black" Height="17" Width="155" RenderTransformOrigin="0.963,9.875" FontSize="14"><Run Text="Номер Карты\"/><Run Text="Телефона"/></TextBlock>
-        <TextBox x:Name="PriceTB" HorizontalAlignment="Left" Height="28" IsReadOnly="True" FontSize="10" Margin="641,247,0,0" Background="White" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="PriceTB" HorizontalAlignment="Left" Height="28" IsReadOnly="True" FontSize="14" Margin="641,247,0,0" Background="White" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="155" BorderBrush="#201F4E" BorderThickness="3" Opacity="0.99"/>
         <TextBlock HorizontalAlignment="Left" Margin="641,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
             Foreground="Black" Height="17" Width="74" RenderTransformOrigin="0.963,9.875" FontSize="14" Text="Цена"/>
         <ComboBox x:Name="PaymentCB" HorizontalAlignment="Left" Margin="295,247,0,0" FontSize="10" VerticalAlignment="Top" Width="149" Height="28" Background="White" 
-                  Foreground="Black"  BorderBrush="#201F4E" BorderThickness="3" SelectionChanged="PaymentCB_SelectionChanged" >
+                  Foreground="Black"  BorderBrush="#201F4E" BorderThickness="3"  >
             <ComboBox.ItemTemplate >
                 <DataTemplate  >
-                    <TextBlock Background="White" x:Name="Service_Name"  Text="{Binding Name_PaymentType}"/>
+                    <TextBlock Background="White" x:Name="PaymentType_Name"  Text="{Binding _name }"/>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
@@ -83,6 +83,25 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
+        <TextBox x:Name="ConfirmNameTB" BorderBrush="Transparent" FontSize="14" IsReadOnly="True"   HorizontalAlignment="Left" Height="23" Background="Transparent" Margin="295,189,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+        <Calendar x:Name="DateOfFlyCL" HorizontalAlignment="Left" Margin="621,189,0,0" VerticalAlignment="Top" Visibility="Hidden" 
+                  FirstDayOfWeek="Monday" SelectionMode="MultipleRange" SelectedDatesChanged="DateOfFlyCL_SelectedDatesChanged" />
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="btn_Calendar" BorderBrush="Transparent"
+            Focusable="False" Width="32" Height="31" Click="btn_Calendar_Click"
+            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="647,158,121,261" RenderTransformOrigin="1.778,2.356" Cursor="Hand">
+            <Button.Background >
+                <ImageBrush ImageSource="Res/Icons/calendar.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="647,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Text="Выбрать дату" Height="17" Width="91" RenderTransformOrigin="0.963,9.875" FontSize="14"/>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="btn_CloseCalendar" BorderBrush="Transparent" Visibility="Hidden"
+            Focusable="False" Width="31" Height="28" Click="btn_CloseCalendar_Click"
+            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="682,161,87,261" RenderTransformOrigin="1.778,2.356" Cursor="Hand">
+            <Button.Background >
+                <ImageBrush ImageSource="Res/Icons/close.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>

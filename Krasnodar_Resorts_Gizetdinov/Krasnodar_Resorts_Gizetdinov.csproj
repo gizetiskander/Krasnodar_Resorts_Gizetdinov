@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>LogoKurort.ico</ApplicationIcon>
+    <ApplicationIcon>Курорты КраснодарА.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
@@ -171,6 +171,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\ListResort.cs" />
+    <Compile Include="Classes\Payment.cs" />
+    <Compile Include="Classes\PaymentType.cs" />
     <Compile Include="Classes\Resorts.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Pages\AdminPage.xaml.cs">
@@ -324,6 +326,8 @@
     <Resource Include="Pages\Res\Icons\LogoKurort.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Pages\Res\Icons\calendar.png" />
+    <Resource Include="Курорты КраснодарА.ico" />
     <Resource Include="Pages\Res\Icons\exit.png" />
     <Resource Include="Pages\Res\Icons\PutinIcon.png" />
     <Resource Include="Pages\Res\Icons\AdminIcon.png" />

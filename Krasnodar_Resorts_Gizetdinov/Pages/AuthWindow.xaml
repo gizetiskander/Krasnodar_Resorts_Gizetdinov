@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov.Pages"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="926" Width="428" Background="White" WindowStyle="ToolWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Res/Icons/close.png">
+        Title="AuthWindow" Height="926" Width="428" Background="White" WindowStyle="ToolWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="Login" BorderBrush="#201F4E" BorderThickness="2" HorizontalAlignment="Left" Height="41" Margin="89,405,0,0" 
                  TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="24" Width="240"/>
