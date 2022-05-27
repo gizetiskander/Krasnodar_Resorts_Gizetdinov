@@ -24,7 +24,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     {
         MongoClient client = new MongoClient();
 
-        Users users = new Users();
+        public static Users users = new Users();
         public MainWindow()
         {
             InitializeComponent();

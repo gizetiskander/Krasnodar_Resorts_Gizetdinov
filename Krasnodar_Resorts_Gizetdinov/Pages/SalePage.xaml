@@ -9,19 +9,43 @@
       Title="SalePage">
 
     <Grid>
-        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="316" VerticalAlignment="Top" Width="414" Margin="292,58,0,0"/>
-        <Image HorizontalAlignment="Left" Height="153" Margin="421,69,0,0" VerticalAlignment="Top" Width="164" Source="Res/Icons/Saleicon.png"/>
-        <ListView x:Name="SaleList" Margin="308,184,105,90" BorderBrush="White">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <Image x:Name="image_Icon" Source=""/>
-                        <TextBlock x:Name="textblock_Cost"/>
-                        <TextBlock x:Name="textblock_Description"/>
-                        <Button x:Name="btn_Pay"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="374" VerticalAlignment="Top" Width="414" Margin="305,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="68" Margin="462,4,0,0" VerticalAlignment="Top" Width="98" Source="Res/Icons/Saleicon.png"/>
+        <ListView x:Name="list_Service" Margin="237,58,10,41" BorderBrush="#201F4E" BorderThickness="3" FontSize="10" Foreground="Black" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="Image" Header="Логотип" Width="80" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image x:Name="image_1" Source="{Binding _image}" Width="70"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn x:Name="Name"  DisplayMemberBinding="{Binding _name}"
+                        Header="Название" Width="90"/>
+                    <GridViewColumn x:Name="Price"  DisplayMemberBinding="{Binding _price}" 
+                        Header="Цена" Width="50"/>
+                    <GridViewColumn x:Name="Description" DisplayMemberBinding="{Binding _description}" 
+                        Header="Описание" Width="240"/>
+                    <GridViewColumn Header="Покупка" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btn_Buy" Content="Buy"  Click="btn_Buy_Click" Grid.ColumnSpan="2" Width="50" Height="25" BorderBrush="Black" BorderThickness="5">
+                                    <Button.Template>
+                                        <ControlTemplate  TargetType="{x:Type Button}">
+                                            <Grid>
+                                                <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                                                <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center" FontSize="10"/>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
         </ListView>
 
     </Grid>

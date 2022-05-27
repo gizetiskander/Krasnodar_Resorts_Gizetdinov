@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using Krasnodar_Resorts_Gizetdinov.Pages;
-using WpfAnimatedGif;
+
 
 namespace Krasnodar_Resorts_Gizetdinov
 {

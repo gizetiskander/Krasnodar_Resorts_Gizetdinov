@@ -28,12 +28,10 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
             var b = abase.GetCollection<Payment>("Payment");
-            var a = abase.GetCollection<Users>("Users");
             AuthWindow.usclick = user;
-            if (UserName. == AuthWindow.usclick._name)
-            {
-                list_Order.ItemsSource = b.AsQueryable().ToList();
-            }
+            var name = AuthWindow.usclick._name;
+            list_Order.ItemsSource = b.AsQueryable().Where(x => x._username == AuthWindow.usclick._name).ToList();
+
         }
     }
 }

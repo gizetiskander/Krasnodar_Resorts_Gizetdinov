@@ -30,6 +30,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public AuthWindow()
         {
             InitializeComponent();
+            
         }
 
         public bool Auth(string nickname, string password)

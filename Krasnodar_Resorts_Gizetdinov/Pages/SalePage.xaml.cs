@@ -23,6 +23,9 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public SalePage()
         {
             InitializeComponent();
+            var abase = client.GetDatabase("Krasnodar_resorts");
+            var b = abase.GetCollection<Resorts>("Resort");
+            list_Service.ItemsSource = b.AsQueryable().ToList();
         }
     }
 }

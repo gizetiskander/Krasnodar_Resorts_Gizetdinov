@@ -96,5 +96,17 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <Button x:Name="btn_Create_Sale" Content="Добавить" Margin="618,358,27,40" Click="btn_Create_Sale_Click" 
+            BorderBrush="Black" BorderThickness="5">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" FontSize="20"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>

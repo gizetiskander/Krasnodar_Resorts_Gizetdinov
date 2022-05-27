@@ -91,6 +91,8 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                                           Convert.ToString(Card.Text),
                                           Convert.ToString(PriceTB.Text),
                                           (false), DateOfFlyCL.SelectedDate.Value.Date);
+                var abase = client.GetDatabase("Krasnodar_resorts");
+                var b = abase.GetCollection<Payment>("Payment");
                 payment.Add(payment);
                 MessageBox.Show("Покупка совершена!");
                 NavigationService.Navigate(new OrderPage(AuthWindow.usclick));

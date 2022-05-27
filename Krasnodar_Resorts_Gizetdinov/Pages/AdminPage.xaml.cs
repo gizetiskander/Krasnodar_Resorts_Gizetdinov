@@ -102,5 +102,27 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             NavigationService.Navigate(new InsertResortPage());
         }
+
+        private void btn_Create_Sale_Click(object sender, RoutedEventArgs e)
+        {
+            if (NameTB.Text == "" || PriceTB.Text == "")
+            {
+                MessageBox.Show("Введите ваши данные!");
+            }
+            else
+            {
+                Sale sale = new Sale(Convert.ToString(NameTB.Text),
+                                     Convert.ToString(PriceTB.Text),
+                                     Convert.ToString(DescriptionTB.Text),
+                                     File.ReadAllBytes(ofdImage.FileName));
+                sale.Add(sale);
+                MessageBox.Show("Занесено в базу!");
+                SalePage salePage = new SalePage();
+                var abase = client.GetDatabase("Krasnodar_resorts");
+                var b = abase.GetCollection<Users>("Users");
+                var a = abase.GetCollection<Resorts>("Resort");
+                sale.list_Service.ItemsSource = b.AsQueryable().ToList();
+            }
+        }
     }
 }

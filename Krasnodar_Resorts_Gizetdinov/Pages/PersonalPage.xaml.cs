@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -8,17 +9,21 @@ using MongoDB.Driver;
 
 namespace Krasnodar_Resorts_Gizetdinov.Pages
 {
+   
     /// <summary>
     /// Логика взаимодействия для PersonalPage.xaml
     /// </summary>
     public partial class PersonalPage : Page
     {
         public static MongoClient client = new MongoClient();
+        public static Users us;
+        public static Payment pay;
         public PersonalPage(Users user)
         {
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
             var b = abase.GetCollection<Users>("Users");
+            var a = abase.GetCollection<Payment>("Payment");
             AuthWindow.usclick = user;
             MemoryStream byteStream = new MemoryStream(user._image);
             BitmapImage image = new BitmapImage();
