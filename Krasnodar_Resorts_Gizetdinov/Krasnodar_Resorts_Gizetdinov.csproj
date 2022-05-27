@@ -194,6 +194,9 @@
     <Compile Include="Pages\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SalePaymentPage.xaml.cs">
+      <DependentUpon>SalePaymentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewPages\MainViewPages.cs" />
     <Compile Include="ViewPages\PagesFoundation.cs" />
     <Page Include="Pages\AdminPage.xaml">
@@ -252,6 +255,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SalePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SalePaymentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

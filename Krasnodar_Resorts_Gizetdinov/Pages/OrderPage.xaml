@@ -25,6 +25,26 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="btn_Delete" Content="Отмена заказа" FontSize="10" Click="btn_Delete_Click" BorderBrush="Black" BorderThickness="3" Margin="467,414,188,3" RenderTransformOrigin="0.5,0.5" Height="Auto">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.584"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E"  Stroke="Black" StrokeThickness="3"/>
+                        <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
+                            VerticalAlignment="Center" FontSize="10"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
 
     </Grid>
 </Page>

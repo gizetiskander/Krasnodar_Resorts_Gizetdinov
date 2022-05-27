@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Krasnodar_Resorts_Gizetdinov.Classes;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +22,20 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     /// </summary>
     public partial class SalePage : Page
     {
+        public static MongoClient client = new MongoClient();
         public SalePage()
         {
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Resorts>("Resort");
+            var b = abase.GetCollection<Sale>("Sale");
             list_Service.ItemsSource = b.AsQueryable().ToList();
         }
+
+        private void btn_Buy_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SalePaymentPage());
+        }
+
+        
     }
 }

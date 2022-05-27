@@ -71,7 +71,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Image x:Name="playim" HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top" Width="112" Grid.Column="1" 
+        <Image x:Name="playim" HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top"  Width="112" Grid.Column="1" 
                RenderTransformOrigin="0.84,0.515" />
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="46"  VerticalAlignment="Top" Width="480" Grid.ColumnSpan="2"/>
         <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="29"  VerticalAlignment="Top" Width="474" Margin="0,967,0,0" Grid.ColumnSpan="2"/>

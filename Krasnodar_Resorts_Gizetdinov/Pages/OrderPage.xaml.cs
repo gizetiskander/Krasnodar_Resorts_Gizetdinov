@@ -33,5 +33,10 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             list_Order.ItemsSource = b.AsQueryable().Where(x => x._username == AuthWindow.usclick._name).ToList();
 
         }
+
+        private void btn_Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
