@@ -36,7 +36,29 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void btn_Delete_Click(object sender, RoutedEventArgs e)
         {
+            var abase = client.GetDatabase("Krasnodar_resorts");
+            var b = abase.GetCollection<Payment>("Payment");
+            var q = list_Order.SelectedItem = b;
+            if (q == null)
+            {
+                MessageBox.Show("Ничего не выбрано!");
+                return;
+            }
+            MessageBoxResult result = MessageBox.Show("Вы действительно хотите отменить заказ?", "Отменить?", MessageBoxButton.YesNoCancel);
+            if (result == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    var select = (Payment)list_Order.SelectedItem;
+                    b.FindOneAndDelete(p => p.Id == select.Id);
+                    list_Order.ItemsSource = b.AsQueryable().ToList();
+                }
+                catch
+                {
+                    MessageBox.Show("Удалите соединения связанные с этим данным");
+                }
 
+            }
         }
     }
 }
