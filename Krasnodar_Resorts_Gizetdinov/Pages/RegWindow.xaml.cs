@@ -112,14 +112,18 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void Email_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (Email.Text == AuthWindow.usclick._email)
+            var abase = client.GetDatabase("Krasnodar_resorts");
+            var b = abase.GetCollection<Users>("Users");
+            if (Email.Text != b.AsQueryable().Select(x => x._email).FirstOrDefault())
             {
                 EmailMessageTB.Text = "Не занято!";
+                Sign_In.IsEnabled = true;
                 EmailMessageTB.Foreground = new SolidColorBrush(Colors.Green);
             }
             else
             {
                 EmailMessageTB.Text = "Такая почта существует!";
+                Sign_In.IsEnabled = false;
                 EmailMessageTB.Foreground = new SolidColorBrush(Colors.Red);
             }
         }

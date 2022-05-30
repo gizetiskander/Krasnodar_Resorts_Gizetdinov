@@ -88,6 +88,6 @@
             </Button.Template>
         </Button>
         <Rectangle Grid.ColumnSpan="2" Fill="Transparent" Stroke="Black" StrokeThickness="3"  HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top" Width="112"/>
-        <TextBox x:Name="EmailMessageTB" BorderBrush="Transparent" FontSize="14" IsReadOnly="True"   HorizontalAlignment="Left" Height="15" Background="Transparent" Margin="115,600,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="EmailMessageTB" BorderBrush="Transparent" FontSize="10" IsReadOnly="True"   HorizontalAlignment="Left" Height="16" Background="Transparent" Margin="115,600,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
