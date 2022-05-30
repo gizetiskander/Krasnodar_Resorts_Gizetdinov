@@ -55,6 +55,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
             var abase = client.GetDatabase("Krasnodar_resorts");
             var b = abase.GetCollection<Users>("Users");
             b.InsertOne(us);
+            
         }
     }
 }

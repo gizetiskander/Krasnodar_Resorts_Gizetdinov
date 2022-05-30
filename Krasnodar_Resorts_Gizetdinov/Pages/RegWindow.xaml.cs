@@ -1,5 +1,6 @@
 ﻿using Krasnodar_Resorts_Gizetdinov.Classes;
 using Microsoft.Win32;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,6 +26,9 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     /// </summary>
     public partial class RegWindow : Window
     {
+
+        public static MongoClient client = new MongoClient();
+
         OpenFileDialog ofdImage = new OpenFileDialog();
         public RegWindow()
         {
@@ -52,7 +56,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             playim.Source = image;
         }
 
-        private void Sign_In_Click(object sender, RoutedEventArgs e)
+        private async void Sign_In_Click(object sender, RoutedEventArgs e)
         {
             if(Email.Text == "" || Password.Text == "")
             {
@@ -104,6 +108,20 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             Regex regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])\S{1,16}$");
             e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void Email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Email.Text == AuthWindow.usclick._email)
+            {
+                EmailMessageTB.Text = "Не занято!";
+                EmailMessageTB.Foreground = new SolidColorBrush(Colors.Green);
+            }
+            else
+            {
+                EmailMessageTB.Text = "Такая почта существует!";
+                EmailMessageTB.Foreground = new SolidColorBrush(Colors.Red);
+            }
         }
     }
 }
