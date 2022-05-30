@@ -46,7 +46,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                 var update = Builders<Users>.Update.Set("_password", NewPasswordTB.Text);
                 var result = b.UpdateOne(filter, update);
                 MessageBox.Show("Пароль изменен!");
-                NavigationService.GoBack();
+                NavigationService.Navigate(new AuthWindow());
             }            
             
 
