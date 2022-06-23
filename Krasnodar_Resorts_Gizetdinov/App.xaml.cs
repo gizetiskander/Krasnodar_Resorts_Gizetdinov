@@ -21,7 +21,7 @@ namespace Krasnodar_Resorts_Gizetdinov
         protected override void OnStartup(StartupEventArgs e)
         {
            
-            SplashScreen splashScreen = new SplashScreen("/Pages/Res/Icons/LogoKurort.png");
+            SplashScreen splashScreen = new SplashScreen("/Pages/Res/Icons/EcoOil.png");
             splashScreen.Show(false);
             splashScreen.Close(new TimeSpan(0, 0, 3));
             base.OnStartup(e);

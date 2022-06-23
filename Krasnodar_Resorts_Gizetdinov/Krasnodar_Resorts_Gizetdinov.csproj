@@ -358,18 +358,20 @@
     <Resource Include="Pages\Res\Icons\sale.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pages\Res\Icons\pers.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Pages\Res\Icons\LogoKurort.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Pages\Res\Icons\pers.png" />
+    <Resource Include="Pages\Res\Icons\info.png" />
+    <Resource Include="Pages\Res\Icons\discount.png" />
+    <Resource Include="Pages\Res\Icons\package.png" />
+    <Resource Include="Pages\Res\Icons\home.png" />
+    <Resource Include="Pages\Res\Icons\exit.png" />
     <Resource Include="Pages\Res\Icons\person.png" />
     <Resource Include="Pages\Res\Icons\LogoEcoOil.png" />
     <Resource Include="Pages\Res\Icons\EcoOil.png" />
     <Resource Include="Pages\Res\Icons\calendar.png" />
     <Resource Include="Курорты КраснодарА.ico" />
-    <Resource Include="Pages\Res\Icons\exit.png" />
     <Resource Include="Pages\Res\Icons\PutinIcon.png" />
     <Resource Include="Pages\Res\Icons\AdminIcon.png" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
@@ -377,7 +379,6 @@
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Resource Include="LogoKurort.ico" />
     <Content Include="mongocrypt.dll" />
-    <Resource Include="Pages\Res\Icons\info.png" />
     <Resource Include="Pages\Res\Icons\Saleicon.png" />
     <Resource Include="Pages\Res\Icons\close.png" />
     <Resource Include="Pages\Res\Subjects\coin.png" />

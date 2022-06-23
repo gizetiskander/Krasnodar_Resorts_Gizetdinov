@@ -47,7 +47,7 @@
                          VerticalAlignment="Center" HorizontalAlignment="Left"
                          Height="30" Width="30" Stretch="Fill" Margin="20,0,0,0"/>
                         <Label Content="{TemplateBinding Content}"
-                               Background="Transparent" FontSize="22"
+                               Background="#2c2c2c" FontSize="22"
                                VerticalAlignment="Center">
                             <Label.Style >
                                 <Style TargetType="Label">
@@ -94,13 +94,13 @@
         </Grid.RowDefinitions>
         <Frame Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden" Content="{Binding CurPage}"/>
 
-        <Grid x:Name="SlideMenu" Grid.Column="0" Grid.Row="1" Background="Transparent">
-            <Border BorderThickness="1, 0, 0, 1" BorderBrush="Transparent" Margin="0,0,-15,0"/>
-            <Border BorderThickness="0" Background="#2c2c2c" Opacity="0.6" Margin="0,-80,-15,0"/>
+        <Grid x:Name="SlideMenu" Grid.Column="0" Grid.Row="1" Background="#2c2c2c">
+            <Border BorderThickness="1, 0, 0, 1" BorderBrush="#2c2c2c" Margin="0,0,-15,0"/>
+            <Border BorderThickness="0" Background="#2c2c2c"  Margin="0,-80,-15,0"/>
             <StackPanel Orientation="Vertical" Margin="0,0,-15,0">
                 <Button Command="{Binding OpenMPage}" Content="Главная">
                     <Button.Resources>
-                        <ImageSource x:Key="Img">Res/Icons/home1.png</ImageSource>
+                        <ImageSource x:Key="Img">Res/Icons/home.png</ImageSource>
                     </Button.Resources>
                     <Button.Template>
                         <StaticResource ResourceKey="SLideMenuBtn"/>
@@ -108,7 +108,7 @@
                 </Button>
                 <Button Command="{Binding OpenOPage}" Content="Заказы">
                     <Button.Resources>
-                        <ImageSource x:Key="Img">Res/Icons/service.png</ImageSource>
+                        <ImageSource x:Key="Img">Res/Icons/package.png</ImageSource>
                     </Button.Resources>
                     <Button.Template>
                         <StaticResource ResourceKey="SLideMenuBtn"/>
@@ -116,7 +116,7 @@
                 </Button>
                 <Button Command="{Binding OpenSPage}" Content="Акции">
                     <Button.Resources>
-                        <ImageSource x:Key="Img">Res/Icons/sale.png</ImageSource>
+                        <ImageSource x:Key="Img">Res/Icons/discount.png</ImageSource>
                     </Button.Resources>
                     <Button.Template>
                         <StaticResource ResourceKey="SLideMenuBtn"/>
