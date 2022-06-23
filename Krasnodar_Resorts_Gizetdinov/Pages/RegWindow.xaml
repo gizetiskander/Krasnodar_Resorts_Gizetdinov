@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov.Pages"
         mc:Ignorable="d"
-        Title="RegWindow"  Height="1024" Width="480" Background="White"  WindowStyle="ToolWindow"  ResizeMode="NoResize" 
+        Title="RegWindow"  Height="1024" Width="480" Background="#1f4f16"  WindowStyle="ToolWindow"  ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="Sign-up">
@@ -21,16 +21,16 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="350" Margin="96,89,0,0" VerticalAlignment="Top" Width="285" Grid.Column="1" Source="Res/Icons/LogoKurort.png" />
+        <Image HorizontalAlignment="Left" Height="612" Margin="0,-51,-24,0" VerticalAlignment="Top" Width="498" Grid.Column="1" Source="Res/Icons/EcoOil.png" />
         <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="46" Margin="115,393,0,0" TextWrapping="Wrap" Text="" 
-                 VerticalAlignment="Top" Width="240" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" PreviewTextInput="UserName_PreviewTextInput"  Grid.Column="1"/>
+                 VerticalAlignment="Top" Width="240" FontSize="30" BorderBrush="#2c2c2c" BorderThickness="5" PreviewTextInput="UserName_PreviewTextInput"  Grid.Column="1"/>
         <TextBox x:Name="Phone" HorizontalAlignment="Left" Height="46" Margin="115,476,0,0" MaxLength="11" TextWrapping="Wrap" Text="" 
-                 PreviewTextInput="Phone_PreviewTextInput" VerticalAlignment="Top" Width="240" FontSize="30" Grid.Column="1" BorderBrush="#201F4E" BorderThickness="5"/>
+                 PreviewTextInput="Phone_PreviewTextInput" VerticalAlignment="Top" Width="240" FontSize="30" Grid.Column="1" BorderBrush="#2c2c2c" BorderThickness="5"/>
         <Button x:Name="Sign_In" Content="Регистрация" Margin="110,825,93,100" Click="Sign_In_Click" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                                VerticalAlignment="Center" FontSize="24"></Label>
                     </Grid>
@@ -41,7 +41,7 @@
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                                VerticalAlignment="Center" FontSize="24"></Label>
                     </Grid>
@@ -49,14 +49,14 @@
             </Button.Template>
         </Button>
         <TextBox x:Name="Email" HorizontalAlignment="Left" Height="46" Margin="115,554,0,0" TextWrapping="Wrap" Text="" TextChanged="Email_TextChanged"  PreviewTextInput="Email_PreviewTextInput"  
-                 VerticalAlignment="Top" Width="240" Grid.Column="1" FontSize="30" BorderBrush="#201F4E" BorderThickness="5"/>
+                 VerticalAlignment="Top" Width="240" Grid.Column="1" FontSize="30" BorderBrush="#2c2c2c" BorderThickness="5"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
                    Foreground="Black" Text="ФИО" Height="26" Width="84" RenderTransformOrigin="0.963,9.875" Grid.Column="1" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,454,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
                    Foreground="Black" Text="Телефон" Height="33" Width="95" RenderTransformOrigin="0.618,0.875" Grid.Column="1" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="115,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular"
                    Foreground="Black" Text="Email" Height="29" Width="60" Grid.Column="1" FontSize="24"/>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" BorderThickness="5" Margin="118,638,0,0" 
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#2c2c2c" BorderThickness="5" Margin="118,638,0,0" 
                  TextWrapping="Wrap" Text=""  VerticalAlignment="Top" PreviewTextInput="Password_PreviewTextInput" Width="240" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="118,612,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
                    Foreground="Black" Text="Пароль " Height="26" Width="92" Grid.Column="1" FontSize="24"/>
@@ -64,7 +64,7 @@
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                                VerticalAlignment="Center" FontSize="20"></Label>
                     </Grid>
@@ -73,21 +73,21 @@
         </Button>
         <Image x:Name="playim" HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top"  Width="112" Grid.Column="1" 
                RenderTransformOrigin="0.84,0.515" />
-        <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="46"  VerticalAlignment="Top" Width="480" Grid.ColumnSpan="2"/>
-        <Rectangle Fill="#201F4E" HorizontalAlignment="Left" Height="29"  VerticalAlignment="Top" Width="474" Margin="0,967,0,0" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#2c2c2c" HorizontalAlignment="Left" Height="46"  VerticalAlignment="Top" Width="480" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#2c2c2c" HorizontalAlignment="Left" Height="29"  VerticalAlignment="Top" Width="474" Margin="0,967,0,0" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_ImageDel" Content="Удалить фото" Margin="118,769,179,162" Click="btnImageDel_Click" Grid.ColumnSpan="2" 
                 BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="Button">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                                VerticalAlignment="Center" FontSize="20"></Label>
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Rectangle Grid.ColumnSpan="2" Fill="Transparent" Stroke="Black" StrokeThickness="3"  HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top" Width="112"/>
+        <Rectangle Grid.ColumnSpan="2" Fill="Transparent" Stroke="#2c2c2c" StrokeThickness="3"  HorizontalAlignment="Left" Height="119" Margin="315,701,0,0" VerticalAlignment="Top" Width="112"/>
         <TextBox x:Name="EmailMessageTB" BorderBrush="Transparent" FontSize="10" IsReadOnly="True"   HorizontalAlignment="Left" Height="16" Background="Transparent" Margin="115,600,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
