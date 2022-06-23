@@ -188,11 +188,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\ListResort.cs" />
     <Compile Include="Classes\Payment.cs" />
     <Compile Include="Classes\PaymentType.cs" />
-    <Compile Include="Classes\Resorts.cs" />
-    <Compile Include="Classes\Sale.cs" />
+    <Compile Include="Classes\Oil.cs" />
+    <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Pages\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>

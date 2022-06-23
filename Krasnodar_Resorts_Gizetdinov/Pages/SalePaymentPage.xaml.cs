@@ -24,13 +24,13 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     public partial class SalePaymentPage : Page
     {
         public static MongoClient client = new MongoClient();
-        public static Sale sale;
+        public static Product sale;
         public static Payment pay;
         public SalePaymentPage()
         {
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Sale>("Sale");
+            var b = abase.GetCollection<Product>("Sale");
             var a = abase.GetCollection<PaymentType>("PaymentType");
             PaymentCB.ItemsSource = a.AsQueryable().ToList();
             TarifCB.ItemsSource = b.AsQueryable().ToList();
@@ -44,7 +44,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             }
             else
             {
-                var servName = ((Sale)TarifCB.SelectedItem)._name;
+                var servName = ((Product)TarifCB.SelectedItem)._name;
                 var payName = ((PaymentType)PaymentCB.SelectedItem)._name;
                 Payment payment = new Payment(Convert.ToString(UserNameTB.Text),
                                           Convert.ToString(servName),
@@ -85,10 +85,10 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         private void TarifCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Sale>("Sale");
-            var filter = Builders<Sale>.Filter.Eq("_price", "24500");
-            var filter1 = Builders<Sale>.Filter.Eq("_price", "49500");
-            var filter2 = Builders<Sale>.Filter.Eq("_price", "80500");
+            var b = abase.GetCollection<Product>("Sale");
+            var filter = Builders<Product>.Filter.Eq("_price", "24500");
+            var filter1 = Builders<Product>.Filter.Eq("_price", "49500");
+            var filter2 = Builders<Product>.Filter.Eq("_price", "80500");
             var price1 = b.Find(filter).ToList();
             var price2 = b.Find(filter1).ToList();
             var price3 = b.Find(filter2).ToList();

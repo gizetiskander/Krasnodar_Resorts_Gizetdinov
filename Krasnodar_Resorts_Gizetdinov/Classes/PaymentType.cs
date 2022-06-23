@@ -36,7 +36,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
         public void Add(PaymentType type)
         {
             MongoClient client = new MongoClient();
-            var abase = client.GetDatabase("Krasnodar_resorts");
+            var abase = client.GetDatabase("Eco_Oil");
             var b = abase.GetCollection<PaymentType>("PaymentType");
             b.InsertOne(type);
         }

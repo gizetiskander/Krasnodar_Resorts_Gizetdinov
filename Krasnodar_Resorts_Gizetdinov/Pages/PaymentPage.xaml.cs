@@ -26,14 +26,14 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     {
 
         public static MongoClient client = new MongoClient();
-        public static Resorts resorts;
+        public static Oil resorts;
         public static Payment pay;
 
         public PaymentPage()
         {
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Resorts>("Resort");
+            var b = abase.GetCollection<Oil>("Resort");
             var a = abase.GetCollection<PaymentType>("PaymentType");
             PaymentCB.ItemsSource = a.AsQueryable().ToList();
             TarifCB.ItemsSource = b.AsQueryable().ToList();
@@ -43,10 +43,10 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         private void TarifCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Resorts>("Resort");
-            var filter = Builders<Resorts>.Filter.Eq("_price", "35000");
-            var filter1 = Builders<Resorts>.Filter.Eq("_price", "85000");
-            var filter2 = Builders<Resorts>.Filter.Eq("_price", "115000");
+            var b = abase.GetCollection<Oil>("Resort");
+            var filter = Builders<Oil>.Filter.Eq("_price", "35000");
+            var filter1 = Builders<Oil>.Filter.Eq("_price", "85000");
+            var filter2 = Builders<Oil>.Filter.Eq("_price", "115000");
             var price1 = b.Find(filter).ToList();
             var price2 = b.Find(filter1).ToList();
             var price3 = b.Find(filter2).ToList();
@@ -83,7 +83,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             }
             else
             {
-                var servName = ((Resorts)TarifCB.SelectedItem)._name;
+                var servName = ((Oil)TarifCB.SelectedItem)._name;
                 var payName = ((PaymentType)PaymentCB.SelectedItem)._name;
                 Payment payment = new Payment(Convert.ToString(UserNameTB.Text),
                                           Convert.ToString(servName),
@@ -91,7 +91,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                                           Convert.ToString(Card.Text),
                                           Convert.ToString(PriceTB.Text),
                                           (false), DateOfFlyCL.SelectedDate.Value.Date);
-                var abase = client.GetDatabase("Krasnodar_resorts");
+                var abase = client.GetDatabase("Eco_Oil");
                 var b = abase.GetCollection<Payment>("Payment");
                 payment.Add(payment);
                 MessageBox.Show("Покупка совершена!");

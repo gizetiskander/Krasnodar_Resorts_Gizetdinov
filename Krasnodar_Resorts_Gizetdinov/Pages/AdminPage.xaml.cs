@@ -33,7 +33,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
             var b = abase.GetCollection<Users>("Users");
-            var a = abase.GetCollection<Resorts>("Resort");
+            var a = abase.GetCollection<Oil>("Resort");
             Card2.Text = Convert.ToString(b.AsQueryable().Count());
             Card.Text = Convert.ToString(a.AsQueryable().Count());
 
@@ -47,7 +47,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             }
             else
             {
-                Resorts resorts = new Resorts(Convert.ToString(NameTB.Text),
+                Oil resorts = new Oil(Convert.ToString(NameTB.Text),
                                      Convert.ToString(PriceTB.Text),
                                      Convert.ToString(DescriptionTB.Text),
                                      File.ReadAllBytes(ofdImage.FileName));
@@ -56,7 +56,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                 MainPage main = new MainPage();
                 var abase = client.GetDatabase("Krasnodar_resorts");
                 var b = abase.GetCollection<Users>("Users");
-                var a = abase.GetCollection<Resorts>("Resort");
+                var a = abase.GetCollection<Oil>("Resort");
                 main.list_Service.ItemsSource = b.AsQueryable().ToList();
             }
         }

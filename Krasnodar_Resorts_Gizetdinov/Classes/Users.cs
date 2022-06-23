@@ -52,7 +52,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
         public void Add(Users us)
         {
             MongoClient client = new MongoClient();
-            var abase = client.GetDatabase("Krasnodar_resorts");
+            var abase = client.GetDatabase("Eco_Oil");
             var b = abase.GetCollection<Users>("Users");
             b.InsertOne(us);
             

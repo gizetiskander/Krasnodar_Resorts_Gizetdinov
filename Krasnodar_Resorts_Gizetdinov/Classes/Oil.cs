@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Krasnodar_Resorts_Gizetdinov.Classes
 {
-    public class Resorts
+    public class Oil
     {
         [BsonId]
         [BsonIgnoreIfDefault]
@@ -19,7 +19,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
         protected string Description;
         protected byte[] Image;
 
-        public Resorts(string v1, string v2, string v3, byte[] v4)
+        public Oil(string v1, string v2, string v3, byte[] v4)
         {
             this.Name = v1;
             this.Price = v2;
@@ -27,7 +27,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
             this.Image = v4;
         }
 
-        public Resorts()
+        public Oil()
         {
         }
 
@@ -42,11 +42,11 @@ namespace Krasnodar_Resorts_Gizetdinov.Classes
 
 
 
-        public void Add(Resorts resorts)
+        public void Add(Oil resorts)
         {
             MongoClient client = new MongoClient();
-            var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Resorts>("Resort");
+            var abase = client.GetDatabase("Eco_Oil");
+            var b = abase.GetCollection<Oil>("Oil");
             b.InsertOne(resorts);
         }
     }

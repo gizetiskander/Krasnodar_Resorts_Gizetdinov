@@ -27,14 +27,14 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Resorts>("Resort");
+            var b = abase.GetCollection<Oil>("Resort");
             list_Service.ItemsSource = b.AsQueryable().ToList();
         }
 
         private void btn_Delete_Click(object sender, RoutedEventArgs e)
         {
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Resorts>("Resort");
+            var b = abase.GetCollection<Oil>("Resort");
             var q = list_Service.SelectedItem = b; 
             if (q == null)
             {
@@ -46,7 +46,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             {
                 try
                 {
-                    var select = (Resorts)list_Service.SelectedItem;
+                    var select = (Oil)list_Service.SelectedItem;
                     b.FindOneAndDelete(p => p.Id == select.Id);
                     list_Service.ItemsSource = b.AsQueryable().ToList();
                 }

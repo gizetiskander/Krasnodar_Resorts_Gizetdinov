@@ -27,7 +27,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Sale>("Sale");
+            var b = abase.GetCollection<Product>("Sale");
             list_Service.ItemsSource = b.AsQueryable().ToList();
         }
 

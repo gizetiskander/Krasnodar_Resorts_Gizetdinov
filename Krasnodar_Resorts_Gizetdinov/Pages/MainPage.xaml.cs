@@ -23,12 +23,12 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
     public partial class MainPage : Page
     {
         public static MongoClient client = new MongoClient();
-        public static Resorts res;
+        public static Oil res;
         public MainPage()
         {
             InitializeComponent();
             var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Resorts>("Resort");
+            var b = abase.GetCollection<Oil>("Resort");
             list_Service.ItemsSource = b.AsQueryable().ToList();
         }
 
