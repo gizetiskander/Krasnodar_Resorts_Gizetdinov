@@ -35,7 +35,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         public bool Auth(string nickname, string password)
         {
-            var abase = client.GetDatabase("Krasnodar_resorts");
+            var abase = client.GetDatabase("Eco_Oil");
             var b = abase.GetCollection<Users>("Users");
             var listPerson = b.Find(Resorts => Resorts._email == nickname && Resorts._password == password).ToList().FirstOrDefault();
             try

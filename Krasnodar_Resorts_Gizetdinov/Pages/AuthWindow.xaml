@@ -24,7 +24,7 @@
         </Button>
         <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="89,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Email" FontWeight="Bold" Height="23" Width="59"/>
         <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="89,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Text="Пароль" FontWeight="Bold" Height="24" Width="79"/>
-        <Image HorizontalAlignment="Left" Height="483" Margin="-24,-37,-103,0" VerticalAlignment="Top" Width="549" Source="Res/Icons/person.png"/>
+        <Image HorizontalAlignment="Left" Height="377" Margin="30,0,-157,0" VerticalAlignment="Top" Width="549" Source="Res/Icons/person.png"/>
         <Rectangle Fill="#2c2c2c" HorizontalAlignment="Left" Height="46"  Margin="0,1,0,0" VerticalAlignment="Top" Width="428"/>
         <Rectangle Fill="#2c2c2c" HorizontalAlignment="Left" Height="77"  Margin="-6,821,0,0" VerticalAlignment="Top" Width="428"/>
         <Image HorizontalAlignment="Left"  Height="192" Margin="104,761,0,-55"  VerticalAlignment="Top" Width="194" Source="Res/Icons/LogoEcoOIl.png" RenderTransformOrigin="0.5,0.5">

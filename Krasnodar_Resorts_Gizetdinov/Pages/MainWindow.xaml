@@ -148,7 +148,7 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="213" Source="Res/Icons/EcoOIl.png" Margin="30,-39,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="119" VerticalAlignment="Top" Width="171" Source="Res/Icons/EcoOIl.png" Margin="51,-24,0,0" Grid.RowSpan="2"/>
         <Button Style="{StaticResource MyButtonStyle}" x:Name="Exit" BorderBrush="Transparent"
             Focusable="False" Width="38" Height="36" Click="Exit_Click"
             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="530,10,10,34" RenderTransformOrigin="1.778,2.356" Cursor="Hand" Grid.Column="1">
