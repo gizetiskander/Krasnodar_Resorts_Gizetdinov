@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Krasnodar_Resorts_Gizetdinov"
         xmlns:vm="clr-namespace:Krasnodar_Resorts_Gizetdinov.ViewPages"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"  WindowStyle="None"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="450" Width="800" Background="#1f4f16"  WindowStyle="None"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:MainViewPages/>
     </Window.DataContext>
@@ -92,13 +92,11 @@
             <RowDefinition Height="80"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Center" VerticalAlignment="Top"
-            Stretch="Fill" Source="Res/Background/KurortBackground.png" Height="450" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Frame Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden" Content="{Binding CurPage}"/>
 
         <Grid x:Name="SlideMenu" Grid.Column="0" Grid.Row="1" Background="Transparent">
             <Border BorderThickness="1, 0, 0, 1" BorderBrush="Transparent" Margin="0,0,-15,0"/>
-            <Border BorderThickness="0" Background="#201F4E" Opacity="0.6" Margin="0,-80,-15,0"/>
+            <Border BorderThickness="0" Background="#2c2c2c" Opacity="0.6" Margin="0,-80,-15,0"/>
             <StackPanel Orientation="Vertical" Margin="0,0,-15,0">
                 <Button Command="{Binding OpenMPage}" Content="Главная">
                     <Button.Resources>
@@ -150,7 +148,7 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="100" Source="Res/Icons/LogoKurort.png" Margin="72,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="213" Source="Res/Icons/EcoOIl.png" Margin="30,-39,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Button Style="{StaticResource MyButtonStyle}" x:Name="Exit" BorderBrush="Transparent"
             Focusable="False" Width="38" Height="36" Click="Exit_Click"
             VerticalAlignment="Center" HorizontalAlignment="Center" Margin="530,10,10,34" RenderTransformOrigin="1.778,2.356" Cursor="Hand" Grid.Column="1">
