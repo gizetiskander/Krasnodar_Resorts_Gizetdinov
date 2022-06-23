@@ -361,6 +361,8 @@
     <Resource Include="Pages\Res\Icons\LogoKurort.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Pages\Res\Icons\food.png" />
+    <Resource Include="Pages\Res\Icons\order.png" />
     <Resource Include="Pages\Res\Icons\pers.png" />
     <Resource Include="Pages\Res\Icons\info.png" />
     <Resource Include="Pages\Res\Icons\discount.png" />

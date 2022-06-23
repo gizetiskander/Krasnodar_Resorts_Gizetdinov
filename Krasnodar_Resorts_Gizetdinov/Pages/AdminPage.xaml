@@ -13,7 +13,7 @@
         <materialDesign:Card  x:Name="Service" HorizontalAlignment="Left" Background="White" Margin="342,37,0,0" VerticalAlignment="Top" Width="150" Height="100">
             <StackPanel>
                 <TextBlock TextWrapping="Wrap" Text="Услуг продано:" FontSize="14" FontWeight="Bold"  />
-                <Image Source="Res/Icons/service.png" Width="48" Height="50" HorizontalAlignment="Left"/>
+                <Image Source="Res/Icons/package.png" Width="48" Height="50" HorizontalAlignment="Left"/>
                 <TextBlock x:Name="Card" Text="" FontSize="20" FontFamily="Regular" FontWeight="Bold" Height="19" Margin="10,0,37,0" />
             </StackPanel>
         </materialDesign:Card>
@@ -25,20 +25,20 @@
             </StackPanel>
         </materialDesign:Card>
         <TextBlock HorizontalAlignment="Left" Margin="422,137,0,0" TextWrapping="Wrap" Text="Добавить тариф" FontSize="20" VerticalAlignment="Top"/>
-        <TextBox x:Name="NameTB" BorderBrush="#201F4E" BorderThickness="2" HorizontalAlignment="Left" Height="32" Margin="343,177,0,0" 
+        <TextBox x:Name="NameTB" BorderBrush="#2c2c2c" BorderThickness="2" HorizontalAlignment="Left" Height="32" Margin="343,177,0,0" 
             TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="14" Width="196"/>
         <TextBlock HorizontalAlignment="Left" Margin="346,158,0,0" TextWrapping="Wrap" Text="Добавить тариф" FontSize="14" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="346,211,0,0" TextWrapping="Wrap" Text="Описание" FontSize="14" VerticalAlignment="Top"/>
-        <TextBox x:Name="DescriptionTB" BorderBrush="#201F4E" BorderThickness="2" HorizontalAlignment="Left"  Height="67"   Margin="346,230,0,0" AcceptsReturn="True" 
+        <TextBox x:Name="DescriptionTB" BorderBrush="#2c2c2c" BorderThickness="2" HorizontalAlignment="Left"  Height="67"   Margin="346,230,0,0" AcceptsReturn="True" 
             TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="10" Width="308"/>
         <TextBlock HorizontalAlignment="Left" Margin="618,302,0,0" TextWrapping="Wrap" Text="Цена" FontSize="14" VerticalAlignment="Top"/>
-        <TextBox x:Name="PriceTB" BorderBrush="#201F4E" MaxLength="7"  BorderThickness="2" HorizontalAlignment="Left" Height="32" Margin="618,321,0,0" 
+        <TextBox x:Name="PriceTB" BorderBrush="#2c2c2c" MaxLength="7"  BorderThickness="2" HorizontalAlignment="Left" Height="32" Margin="618,321,0,0" 
             TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="14" Width="117" PreviewTextInput="PriceTB_PreviewTextInput"/>
         <Button x:Name="btn_Image" Content="Добавить фото" Margin="346,302,299,107" Click="btn_Image_Click" BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="20"/>
                     </Grid>
@@ -52,7 +52,7 @@
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="20"/>
                     </Grid>
@@ -64,20 +64,20 @@
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="20"/>
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Rectangle Fill="Transparent" Stroke="Black" StrokeThickness="3"  HorizontalAlignment="Left" Height="89" Margin="515,302,0,0" VerticalAlignment="Top" Width="98"/>
+        <Rectangle Fill="Transparent" Stroke="#2c2c2c" StrokeThickness="3"  HorizontalAlignment="Left" Height="89" Margin="515,302,0,0" VerticalAlignment="Top" Width="98"/>
         <Button x:Name="btn_Clear" Content="Очистить" Margin="506,405,139,-7" Click="btn_Clear_Click" 
             BorderBrush="Black" BorderThickness="5">
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="20"/>
                     </Grid>
@@ -89,7 +89,7 @@
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="20"/>
                     </Grid>

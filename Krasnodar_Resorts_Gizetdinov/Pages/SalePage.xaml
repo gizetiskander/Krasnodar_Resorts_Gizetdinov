@@ -9,9 +9,8 @@
       Title="SalePage">
 
     <Grid>
-        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="374" VerticalAlignment="Top" Width="414" Margin="326,0,0,0"/>
-        <Image HorizontalAlignment="Left" Height="68" Margin="487,10,0,0" VerticalAlignment="Top" Width="98" Source="Res/Icons/Saleicon.png"/>
-        <ListView x:Name="list_Service" Margin="247,77,0,22" BorderBrush="#201F4E" BorderThickness="3" FontSize="10" Foreground="Black"  >
+        <Image HorizontalAlignment="Left" Height="68" Margin="487,10,0,0" VerticalAlignment="Top" Width="98" Source="Res/Icons/food.png"/>
+        <ListView x:Name="list_Service" Margin="247,77,0,22" BorderBrush="#2c2c2c" BorderThickness="3" FontSize="10" Foreground="Black"  >
             <ListView.View>
                 <GridView>
                     <GridViewColumn x:Name="Image" Header="Логотип" Width="80" >
@@ -34,7 +33,7 @@
                                     <Button.Template>
                                         <ControlTemplate  TargetType="{x:Type Button}">
                                             <Grid>
-                                                <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                                                <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5"/>
                                                 <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                                                     VerticalAlignment="Center" FontSize="10"/>
                                             </Grid>

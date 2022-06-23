@@ -10,8 +10,8 @@
 
     <Grid>
         <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="540" Margin="250,59,0,0"/>
-        <Image HorizontalAlignment="Left" Height="113" Margin="449,59,0,0" Source="Res/Background/Order.png" VerticalAlignment="Top" Width="114"/>
-        <ListView x:Name="list_Order" Margin="312,172,72,56" BorderBrush="#201F4E" BorderThickness="3" FontSize="10" Foreground="Black" >
+        <Image HorizontalAlignment="Left" Height="113" Margin="464,59,0,0" Source="Res/Icons/order.png" VerticalAlignment="Top" Width="114"/>
+        <ListView x:Name="list_Order" Margin="312,172,72,56" BorderBrush="#2c2c2c" BorderThickness="3" FontSize="10" Foreground="Black" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn x:Name="UserName"  DisplayMemberBinding="{Binding _service}"
@@ -37,7 +37,7 @@
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E"  Stroke="Black" StrokeThickness="3"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c"  Stroke="Black" StrokeThickness="3"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="10"/>
                     </Grid>

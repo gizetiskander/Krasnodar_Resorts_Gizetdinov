@@ -114,9 +114,9 @@
                         <StaticResource ResourceKey="SLideMenuBtn"/>
                     </Button.Template>
                 </Button>
-                <Button Command="{Binding OpenSPage}" Content="Акции">
+                <Button Command="{Binding OpenSPage}" Content="Продукты">
                     <Button.Resources>
-                        <ImageSource x:Key="Img">Res/Icons/discount.png</ImageSource>
+                        <ImageSource x:Key="Img">Res/Icons/food.png</ImageSource>
                     </Button.Resources>
                     <Button.Template>
                         <StaticResource ResourceKey="SLideMenuBtn"/>

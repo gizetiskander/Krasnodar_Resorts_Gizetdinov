@@ -11,8 +11,8 @@
 
     </Page.Resources>
     <Grid>
-        <Rectangle Fill="White" Stroke="#201F4E" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="543" Margin="247,59,0,0"/>
-        <ListView x:Name="list_Service" Margin="247,59,0,40" BorderBrush="#201F4E" BorderThickness="3" FontSize="10" Foreground="Black" >
+        <Rectangle Fill="White" Stroke="#2c2c2c" StrokeThickness="3" RadiusX="10" RadiusY="10" HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="543" Margin="247,59,0,0"/>
+        <ListView x:Name="list_Service" Margin="247,59,0,40" BorderBrush="#2c2c2c" BorderThickness="3" FontSize="10" Foreground="Black" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn x:Name="Image" Header="Логотип" Width="80" >
@@ -35,7 +35,7 @@
                                     <Button.Template>
                                         <ControlTemplate  TargetType="Button">
                                             <Grid>
-                                                <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5"/>
+                                                <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5"/>
                                                 <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                                             VerticalAlignment="Center" FontSize="10"></Label>
                                             </Grid>
@@ -48,6 +48,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock HorizontalAlignment="Left" Margin="464,16,0,0" TextWrapping="Wrap" Text="Тарифы" Foreground="#f3ac10" FontSize="32" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="464,16,0,0" TextWrapping="Wrap" Text="Тарифы" Foreground="#ebe939" FontSize="32" VerticalAlignment="Top"/>
     </Grid>
 </Page>
