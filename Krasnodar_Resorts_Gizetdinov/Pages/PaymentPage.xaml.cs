@@ -90,7 +90,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                                           Convert.ToString(payName),
                                           Convert.ToString(Card.Text),
                                           Convert.ToString(PriceTB.Text),
-                                          (false), DateOfFlyCL.SelectedDate.Value.Date);
+                                          (true), DateTime.Now);
                 var abase = client.GetDatabase("Eco_Oil");
                 var b = abase.GetCollection<Payment>("Payment");
                 payment.Add(payment);

@@ -26,7 +26,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public OrderPage(Users user)
         {
             InitializeComponent();
-            var abase = client.GetDatabase("Krasnodar_resorts");
+            var abase = client.GetDatabase("Eco_Oil");
             var b = abase.GetCollection<Payment>("Payment");
             AuthWindow.usclick = user;
             var name = AuthWindow.usclick._name;
@@ -36,7 +36,7 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void btn_Delete_Click(object sender, RoutedEventArgs e)
         {
-            var abase = client.GetDatabase("Krasnodar_resorts");
+            var abase = client.GetDatabase("Eco_Oil");
             var b = abase.GetCollection<Payment>("Payment");
             var q = list_Order.SelectedItem = b;
             if (q == null)

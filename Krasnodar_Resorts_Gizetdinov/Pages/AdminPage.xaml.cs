@@ -47,33 +47,22 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
             }
             else
             {
-                Product resorts = new Product(Convert.ToString(NameTB.Text),
-                                     Convert.ToString(PriceTB.Text),
-                                     Convert.ToString(DescriptionTB.Text),
-                                     File.ReadAllBytes(ofdImage.FileName));
+                Oil resorts = new Oil(Convert.ToString(NameTB.Text),
+                                    Convert.ToString(PriceTB.Text),
+                                    Convert.ToString(DescriptionTB.Text),
+                                    File.ReadAllBytes(ofdImage.FileName));
                 resorts.Add(resorts);
                 MessageBox.Show("Занесено в базу!");
                 MainPage main = new MainPage();
                 var abase = client.GetDatabase("Eco_Oil");
                 var b = abase.GetCollection<Users>("Users");
-                var a = abase.GetCollection<Product>("Product");
+                var a = abase.GetCollection<Oil>("Oil");
                 main.list_Service.ItemsSource = b.AsQueryable().ToList();
             }
         }
 
         private void btn_ImageDel_Click(object sender, RoutedEventArgs e)
         {
-            Oil resorts = new Oil(Convert.ToString(NameTB.Text),
-                                    Convert.ToString(PriceTB.Text),
-                                    Convert.ToString(DescriptionTB.Text),
-                                    File.ReadAllBytes(ofdImage.FileName));
-            resorts.Add(resorts);
-            MessageBox.Show("Занесено в базу!");
-            MainPage main = new MainPage();
-            var abase = client.GetDatabase("Eco_Oil");
-            var b = abase.GetCollection<Users>("Users");
-            var a = abase.GetCollection<Oil>("Oil");
-            main.list_Service.ItemsSource = b.AsQueryable().ToList();
             BitmapImage image = new BitmapImage();
             image.Freeze();
             playim.Source = image;

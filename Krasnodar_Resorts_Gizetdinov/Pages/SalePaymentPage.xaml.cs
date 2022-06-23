@@ -29,8 +29,8 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public SalePaymentPage()
         {
             InitializeComponent();
-            var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Product>("Sale");
+            var abase = client.GetDatabase("Eco_Oil");
+            var b = abase.GetCollection<Product>("Product");
             var a = abase.GetCollection<PaymentType>("PaymentType");
             PaymentCB.ItemsSource = a.AsQueryable().ToList();
             TarifCB.ItemsSource = b.AsQueryable().ToList();
@@ -51,8 +51,8 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                                           Convert.ToString(payName),
                                           Convert.ToString(Card.Text),
                                           Convert.ToString(PriceTB.Text),
-                                          (false), DateOfFlyCL.SelectedDate.Value.Date);
-                var abase = client.GetDatabase("Krasnodar_resorts");
+                                          (true), DateTime.Now);
+                var abase = client.GetDatabase("Eco_Oil");
                 var b = abase.GetCollection<Payment>("Payment");
                 payment.Add(payment);
                 MessageBox.Show("Покупка совершена!");
@@ -84,14 +84,16 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void TarifCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Product>("Sale");
-            var filter = Builders<Product>.Filter.Eq("_price", "24500");
-            var filter1 = Builders<Product>.Filter.Eq("_price", "49500");
-            var filter2 = Builders<Product>.Filter.Eq("_price", "80500");
+            var abase = client.GetDatabase("Eco_Oil");
+            var b = abase.GetCollection<Product>("Product");
+            var filter = Builders<Product>.Filter.Eq("_price", "55");
+            var filter1 = Builders<Product>.Filter.Eq("_price", "120");
+            var filter2 = Builders<Product>.Filter.Eq("_price", "60");
+            var filter3 = Builders<Product>.Filter.Eq("_price", "50");
             var price1 = b.Find(filter).ToList();
             var price2 = b.Find(filter1).ToList();
             var price3 = b.Find(filter2).ToList();
+            var price4 = b.Find(filter3).ToList();
             foreach (var p in price1)
             {
                 if (TarifCB.SelectedIndex == 0)
@@ -107,6 +109,13 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
                 }
             }
             foreach (var p in price3)
+            {
+                if (TarifCB.SelectedIndex == 2)
+                {
+                    PriceTB.Text = p._price;
+                }
+            }
+            foreach (var p in price4)
             {
                 if (TarifCB.SelectedIndex == 2)
                 {
