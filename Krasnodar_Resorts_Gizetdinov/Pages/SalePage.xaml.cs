@@ -26,8 +26,8 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public SalePage()
         {
             InitializeComponent();
-            var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Product>("Sale");
+            var abase = client.GetDatabase("Eco_Oil");
+            var b = abase.GetCollection<Product>("Product");
             list_Service.ItemsSource = b.AsQueryable().ToList();
         }
 

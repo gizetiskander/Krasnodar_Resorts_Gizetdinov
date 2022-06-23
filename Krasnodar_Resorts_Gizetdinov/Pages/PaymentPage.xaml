@@ -94,6 +94,16 @@
                 <ImageBrush ImageSource="Res/Icons/close.png"/>
             </Button.Background>
         </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="641,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Regular" 
+            Foreground="Black" Height="17" Width="55" RenderTransformOrigin="0.963,9.875" FontSize="14"><Run Text="Литры"/><LineBreak/><Run/></TextBlock>
+        <ComboBox x:Name="LitrCB" HorizontalAlignment="Left" FontSize="10" Margin="641,161,0,0" VerticalAlignment="Top" Width="149" Height="28" Background="White" 
+            Foreground="Black" BorderBrush="#2c2c2c" BorderThickness="3" SelectionChanged="LitrCB_SelectionChanged">
+            <TextBlock>10</TextBlock>
+            <TextBlock>20</TextBlock>
+            <TextBlock>30</TextBlock>
+            <TextBlock>40</TextBlock>
+            <TextBlock>50</TextBlock>
+        </ComboBox>
 
     </Grid>
 </Page>

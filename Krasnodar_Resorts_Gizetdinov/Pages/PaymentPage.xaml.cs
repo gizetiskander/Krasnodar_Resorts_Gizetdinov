@@ -32,8 +32,8 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         public PaymentPage()
         {
             InitializeComponent();
-            var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Oil>("Resort");
+            var abase = client.GetDatabase("Eco_Oil");
+            var b = abase.GetCollection<Oil>("Oil");
             var a = abase.GetCollection<PaymentType>("PaymentType");
             PaymentCB.ItemsSource = a.AsQueryable().ToList();
             TarifCB.ItemsSource = b.AsQueryable().ToList();
@@ -42,11 +42,11 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
 
         private void TarifCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var abase = client.GetDatabase("Krasnodar_resorts");
-            var b = abase.GetCollection<Oil>("Resort");
-            var filter = Builders<Oil>.Filter.Eq("_price", "35000");
-            var filter1 = Builders<Oil>.Filter.Eq("_price", "85000");
-            var filter2 = Builders<Oil>.Filter.Eq("_price", "115000");
+            var abase = client.GetDatabase("Eco_Oil");
+            var b = abase.GetCollection<Oil>("Oil");
+            var filter = Builders<Oil>.Filter.Eq("_price", "43,15");
+            var filter1 = Builders<Oil>.Filter.Eq("_price", "47,60");
+            var filter2 = Builders<Oil>.Filter.Eq("_price", "61,95");
             var price1 = b.Find(filter).ToList();
             var price2 = b.Find(filter1).ToList();
             var price3 = b.Find(filter2).ToList();
@@ -143,6 +143,87 @@ namespace Krasnodar_Resorts_Gizetdinov.Pages
         {
             DateTime? selectedDate = DateOfFlyCL.SelectedDate;
             MessageBox.Show(selectedDate.Value.Date.ToLongDateString());
+        }
+
+        private void LitrCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var abase = client.GetDatabase("Eco_Oil");
+            var b = abase.GetCollection<Oil>("Oil");
+            var filter = Builders<Oil>.Filter.Eq("_price", "43,15");
+            var filter1 = Builders<Oil>.Filter.Eq("_price", "47,60");
+            var filter2 = Builders<Oil>.Filter.Eq("_price", "61,95");
+            var price1 = b.Find(filter).ToList();
+            var price2 = b.Find(filter1).ToList();
+            var price3 = b.Find(filter2).ToList();
+            foreach (var p in price1)
+            {
+                if (LitrCB.SelectedIndex == 0)
+                {
+                    PriceTB.Text = "431,15";
+                }
+                if (LitrCB.SelectedIndex == 1)
+                {
+                    PriceTB.Text = "863";
+                }
+                if (LitrCB.SelectedIndex == 2)
+                {
+                    PriceTB.Text = "1294,5";
+                }
+                if (LitrCB.SelectedIndex == 3)
+                {
+                    PriceTB.Text = "1726";
+                }
+                if (LitrCB.SelectedIndex == 4)
+                {
+                    PriceTB.Text = "2157,5";
+                }
+            }
+            foreach (var p in price2)
+            {
+                if (LitrCB.SelectedIndex == 0)
+                {
+                    PriceTB.Text = "476";
+                }
+                if (LitrCB.SelectedIndex == 1)
+                {
+                    PriceTB.Text = "952";
+                }
+                if (LitrCB.SelectedIndex == 2)
+                {
+                    PriceTB.Text = "1428";
+                }
+                if (LitrCB.SelectedIndex == 3)
+                {
+                    PriceTB.Text = "1904";
+                }
+                if (LitrCB.SelectedIndex == 4)
+                {
+                    PriceTB.Text = "2380";
+                }
+            }
+            foreach (var p in price3)
+            {
+                if (LitrCB.SelectedIndex == 0)
+                {
+                    PriceTB.Text = "619,5";
+                }
+                if (LitrCB.SelectedIndex == 1)
+                {
+                    PriceTB.Text = "1239";
+                }
+                if (LitrCB.SelectedIndex == 2)
+                {
+                    PriceTB.Text = "1858,5";
+                }
+                if (LitrCB.SelectedIndex == 3)
+                {
+                    PriceTB.Text = "2478";
+                }
+                if (LitrCB.SelectedIndex == 4)
+                {
+                    PriceTB.Text = "3097,5";
+                }
+            }
         }
     }
 }
