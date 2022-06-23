@@ -9,15 +9,15 @@
       Title="InsertPaswordPage">
 
     <Grid>
-        <TextBox x:Name="OldPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" TextChanged="OldPasswordTB_TextChanged" 
+        <TextBox x:Name="OldPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#2c2c2c" TextChanged="OldPasswordTB_TextChanged" 
                   BorderThickness="5" Margin="403,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240"/>
         <TextBlock HorizontalAlignment="Left" Margin="403,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
             Foreground="Black" Text="Старый пароль" Height="26" Width="176" FontSize="24"/>
-        <TextBox x:Name="NewPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" TextChanged="NewPasswordTB_TextChanged" BorderBrush="#201F4E" BorderThickness="5" Margin="403,181,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="NewPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" TextChanged="NewPasswordTB_TextChanged" BorderBrush="#2c2c2c" BorderThickness="5" Margin="403,181,0,0" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="240"/>
         <TextBlock HorizontalAlignment="Left" Margin="403,159,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"  FontFamily="Regular"
             Foreground="Black" Text="Новый пароль" Height="26" Width="169" FontSize="24"/>
-        <TextBox x:Name="ConfirmPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#201F4E" TextChanged="ConfirmPasswordTB_TextChanged" BorderThickness="5" Margin="403,288,0,0" TextWrapping="Wrap" Text="" 
+        <TextBox x:Name="ConfirmPasswordTB" HorizontalAlignment="Left" Height="46" FontSize="30" BorderBrush="#2c2c2c" TextChanged="ConfirmPasswordTB_TextChanged" BorderThickness="5" Margin="403,288,0,0" TextWrapping="Wrap" Text="" 
             VerticalAlignment="Top" Width="240"/>
         <TextBlock HorizontalAlignment="Left" Margin="403,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  FontFamily="Regular"
             Foreground="Black" Height="26" Width="287" FontSize="22"><Run Text="По"/><Run Text="дтверждение пароля"/></TextBlock>
@@ -33,7 +33,7 @@
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E"  Stroke="Black" StrokeThickness="3"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c"  Stroke="Black" StrokeThickness="3"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="14"/>
                     </Grid>

@@ -9,7 +9,7 @@
       Title="InsertResortPage">
 
     <Grid>
-        <ListView x:Name="list_Service" Margin="247,40,0,60" BorderBrush="#201F4E" BorderThickness="3" FontSize="10" Foreground="Black" >
+        <ListView x:Name="list_Service" Margin="247,40,0,60" BorderBrush="#2c2c2c" BorderThickness="3" FontSize="10" Foreground="Black" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn x:Name="Image" Header="Логотип" Width="80" >
@@ -33,7 +33,7 @@
             <Button.Template>
                 <ControlTemplate  TargetType="{x:Type Button}">
                     <Grid>
-                        <Rectangle RadiusX="10" RadiusY="10" Fill="#201F4E" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
+                        <Rectangle RadiusX="10" RadiusY="10" Fill="#2c2c2c" Stroke="Black" StrokeThickness="5" Margin="0,0,0,10"/>
                         <Label Content="{TemplateBinding Content}"   Foreground="White" HorizontalAlignment="Center"
                             VerticalAlignment="Center" FontSize="20"/>
                     </Grid>
